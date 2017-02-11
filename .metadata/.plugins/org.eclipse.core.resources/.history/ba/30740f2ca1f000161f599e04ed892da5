@@ -1,0 +1,68 @@
+package metaprogramming.demo;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class SimpleDataViewer extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SimpleDataViewer frame = new SimpleDataViewer();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SimpleDataViewer() {
+		setTitle("Simple Data Viewer");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		Data record1 = new Data();
+		record1.setFirstName("Bob");
+		record1.setLastName("Marley");
+		
+		
+		Data record2 = new Data(); 
+		record2.setFirstName("Tim");
+		record2.setLastName("Cook");
+		
+		Data record3 = new Data();
+		record3.setFirstName("Alex");
+		record3.setLastName("Ianta");
+		
+		DataField firstName = new DataField();
+		firstName.addData(record1);
+		firstName.addData(record2);
+		firstName.addData(record3);
+		
+		//Load First Name Data Field
+		FirstNameDataFieldPanel firstNamePanel = new FirstNameDataFieldPanel(firstName);
+		contentPane.add(firstNamePanel);
+		
+	}
+
+}

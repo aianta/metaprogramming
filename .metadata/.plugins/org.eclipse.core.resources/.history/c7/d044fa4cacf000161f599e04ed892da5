@@ -1,0 +1,23 @@
+package metaprogramming.demo;
+
+import javax.swing.AbstractListModel;
+
+public class FirstNameAbstractListModel extends AbstractListModel{
+
+	DataModel model;
+	
+	public FirstNameAbstractListModel (DataModel model){
+		this.model = model;
+	}
+	
+	@Override
+	public Object getElementAt(int index) {
+		return model.get(index).getFirstName();
+	}
+
+	@Override
+	public int getSize() {
+		return model.getSize();
+	}
+
+}

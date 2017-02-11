@@ -1,0 +1,90 @@
+package metaprogramming.demo;
+
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+
+public class SimpleDataViewer extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SimpleDataViewer frame = new SimpleDataViewer();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SimpleDataViewer() {
+		setTitle("Simple Data Viewer");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		Data record1 = new Data();
+		record1.setFirstName("Bob");
+		record1.setLastName("Marley");
+		
+		
+		Data record2 = new Data(); 
+		record2.setFirstName("Tim");
+		record2.setLastName("Cook");
+		
+		Data record3 = new Data();
+		record3.setFirstName("Alex");
+		record3.setLastName("Ianta");
+		
+		DataModel dataModel = new DataModel();
+		dataModel.addData(record1);
+		dataModel.addData(record2);
+		dataModel.addData(record3);
+		
+
+		GridBagLayout gbl_contentPane = new GridBagLayout();
+		gbl_contentPane.columnWidths = new int[]{1, 424, 0};
+		gbl_contentPane.rowHeights = new int[]{1, 0};
+		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, Double.MIN_VALUE};
+		contentPane.setLayout(gbl_contentPane);
+		
+		//Load First Name Data Field
+		FirstNameDataFieldPanel firstNamePanel = new FirstNameDataFieldPanel(dataModel);
+		GridBagConstraints gbc_firstNamePanel = new GridBagConstraints();
+		gbc_firstNamePanel.fill = GridBagConstraints.BOTH;
+		gbc_firstNamePanel.insets = new Insets(0, 0, 0, 5);
+		gbc_firstNamePanel.gridx = 0;
+		gbc_firstNamePanel.gridy = 0;
+		contentPane.add(firstNamePanel, gbc_firstNamePanel);
+		
+		LastNameDataFieldPanel lastNamePanel = new LastNameDataFieldPanel(dataModel);
+		GridBagConstraints gbc_lastNamePanel = new GridBagConstraints();
+		gbc_lastNamePanel.fill = GridBagConstraints.BOTH;
+		gbc_lastNamePanel.gridx = 1;
+		gbc_lastNamePanel.gridy = 0;
+		contentPane.add(lastNamePanel, gbc_lastNamePanel);
+	}
+
+}
