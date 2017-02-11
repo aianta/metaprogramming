@@ -1,0 +1,33 @@
+package metaprogramming.generator;
+
+public class SourceFile {
+	
+	private String name;
+	private String data;
+	private String path;
+	
+	public SourceFile (String name, String path){
+		this.name = name;
+		this.path = path;
+	}
+	
+	public String getFileName() {
+		return name;
+	}
+	public void setFileName(String fileName) {
+		this.name = fileName;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+}

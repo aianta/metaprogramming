@@ -1,0 +1,21 @@
+package metaprogramming.demo;
+
+import java.util.ArrayList;
+
+public class DataField {
+	
+	ArrayList<Data> data = new ArrayList<Data>();
+
+	public ArrayList<Data> getData() {
+		return data;
+	}
+
+	public void addData (Data data){
+		this.data.add(data);
+	}
+	
+	public void sort(){
+		data.sort(new StringComparator());
+	}
+	
+}

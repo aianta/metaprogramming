@@ -1,0 +1,13 @@
+package metaprogramming.demo;
+
+import java.util.Comparator;
+
+public class StringComparator implements Comparator {
+
+	@Override
+	public int compare(Object string1, Object string2) {
+		
+		return Integer.valueOf((String)string1).compareTo(Integer.valueOf((String)string2));
+	}
+
+}

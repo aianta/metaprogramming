@@ -1,0 +1,64 @@
+package metaprogramming.demo;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class SimpleDataViewer extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SimpleDataViewer frame = new SimpleDataViewer();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SimpleDataViewer() {
+		setTitle("Simple Data Viewer");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		Data firstName1 = new Data();
+		firstName1.setFirstName("Bob");
+		
+		Data firstName2 = new Data(); 
+		firstName2.setFirstName("Tim");
+		
+		Data firstName3 = new Data();
+		firstName3.setFirstName("Alex");
+		
+		DataField firstName = new DataField();
+		firstName.addData(firstName1);
+		firstName.addData(firstName2);
+		firstName.addData(firstName3);
+		
+		//Load First Name Data Field
+		DataFieldPanel firstNamePanel = new DataFieldPanel(firstName);
+		contentPane.add(firstNamePanel);
+		
+	}
+
+}

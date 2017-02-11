@@ -1,0 +1,16 @@
+package metaprogramming.demo;
+
+public class Data {
+	
+	String FirstName;
+
+	public String getFirstName() {
+		return FirstName;
+	}
+
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+	
+
+}

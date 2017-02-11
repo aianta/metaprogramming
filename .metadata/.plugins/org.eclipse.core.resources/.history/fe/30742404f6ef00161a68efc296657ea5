@@ -1,0 +1,14 @@
+package metaprogramming.demo;
+
+import javax.swing.JPanel;
+
+public class DataFieldPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public DataFieldPanel() {
+
+	}
+
+}
