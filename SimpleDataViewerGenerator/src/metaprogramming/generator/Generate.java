@@ -1,10 +1,14 @@
 package metaprogramming.generator;
 
 import metaprogramming.antlr.*;
+import metaprogramming.generator.processors.DataJavaProcessor;
+import metaprogramming.generator.processors.DeclareFieldProcessor;
+import metaprogramming.generator.processors.GetFieldProcessor;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import org.antlr.runtime.tree.Tree;
@@ -20,45 +24,60 @@ public class Generate {
 		// TODO Auto-generated method stub
 
 		SourceFile dataJava = 
-				new SourceFile ("Data", "src/metaprogramming/source/Data.java");
+				new SourceFile ("Data", "src/metaprogramming/source/Data.java", ".java");
 
-		SourceFile dataFieldJava = 
-				new SourceFile ("DataField", "src/metaprogramming/source/DataField.java");
+		SourceFile declareField =
+				new SourceFile ("declareField", "src/metaprogramming/microservice/declareField.java", ".java");
+		
+		SourceFile getField =
+				new SourceFile ("getField", "src/metaprogramming/microservice/fieldGetter.java", ".java");
+		
+		SourceFile dataModelJava = 
+				new SourceFile ("DataModel", "src/metaprogramming/source/DataModel.java", ".java");
 		
 		SourceFile dataFieldPanelJava =
-				new SourceFile ("DataFieldPanel", "src/metaprogramming/source/DataFieldPanel.java");
-
-		SourceFile firstNameComparatorJava =
-				new SourceFile ("FirstNameComparator","src/metaprogramming/source/FirstNameComparator.java");
+				new SourceFile ("DataFieldPanel", "src/metaprogramming/source/DataFieldPanel.java", ".java");
 		
 		SourceFile simpleDataViewerJava =
-				new SourceFile ("SimpleDataViewer","src/metaprogramming/source/SimpleDataViewer.java");
+				new SourceFile ("SimpleDataViewer","src/metaprogramming/source/SimpleDataViewer.java", ".java");
 	
 		dataJava.load();
-		dataFieldJava.load();
+		declareField.load();
+		getField.load();
+		dataModelJava.load();
 		dataFieldPanelJava.load();
-		firstNameComparatorJava.load();
 		simpleDataViewerJava.load();
 		
-		Java8Parser javaParser = processJava (dataJava, new DataJavaListener());
-		ParseTree dataJavaTree = javaParser.compilationUnit();
-		DataJavaListener dataListener = new DataJavaListener();
-		javaParser.addParseListener(dataListener);
+		DataJavaProcessor dataJavaProcessor = new DataJavaProcessor(dataJava);
+		dataJavaProcessor.processFile();
 		
-		Trees.inspect(dataJavaTree, javaParser);
+		DeclareFieldProcessor declareFieldProcessor = new DeclareFieldProcessor(declareField);
+		declareFieldProcessor.processFile();
+		declareFieldProcessor.getSourceFile().getTarget("fieldName").setText("customName");
 		
-	}
-	
-
-	public static Java8Parser processJava (SourceFile javaFile, ParseTreeListener listener){
+		dataJavaProcessor.getSourceFile()
+			.applyMicroservice(
+					declareFieldProcessor.getSourceFile().getSourceTree(),
+					"declareField");
 		
-		ANTLRInputStream antlrInput = new ANTLRInputStream(javaFile.getData());
-		Java8Lexer lexer = new Java8Lexer (antlrInput);
-		CommonTokenStream tokenStream = new CommonTokenStream(lexer);
-		Java8Parser parser = new Java8Parser(tokenStream);
+		declareFieldProcessor.processFile();
+		declareFieldProcessor.getSourceFile().getTarget("fieldName").setText("customName2");
+		dataJavaProcessor.getSourceFile()
+			.applyMicroservice(
+					declareFieldProcessor.getSourceFile().getSourceTree(),
+					"declareField");
 		
+		GetFieldProcessor getFieldProcessor = new GetFieldProcessor(getField);
+		getFieldProcessor.processFile();
+		getFieldProcessor.getSourceFile().getTarget("fieldName").setText("customName");
+		getFieldProcessor.getSourceFile().getTarget("methodName").setText("getCustomName");
+		dataJavaProcessor.getSourceFile()
+			.applyMicroservice(
+					getFieldProcessor.getSourceFile().getSourceTree(),
+					"declareField");
 		
-		return parser;
+		dataJavaProcessor.generate();
+		
 	}
 	
 }

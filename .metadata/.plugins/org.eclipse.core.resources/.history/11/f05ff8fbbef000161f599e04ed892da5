@@ -1,0 +1,25 @@
+package metaprogramming.generator;
+
+import metaprogramming.antlr.*;
+
+import org.antlr.v4.runtime.CommonToken;
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.RuleContext;
+import org.antlr.v4.runtime.tree.ErrorNode;
+import org.antlr.v4.runtime.tree.TerminalNode;
+import org.antlr.v4.runtime.tree.TerminalNodeImpl;
+
+import metaprogramming.antlr.Java8BaseListener;
+import metaprogramming.antlr.Java8Listener;
+import metaprogramming.antlr.Java8Parser;
+import metaprogramming.antlr.Java8Parser.*;
+
+public class DataJavaListener extends Java8BaseListener {
+
+	public void exitEveryRule(ParserRuleContext ctx) {
+		
+		System.out.println(ctx.getText());
+		
+	}
+
+}

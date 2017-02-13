@@ -1,0 +1,53 @@
+package metaprogramming.generator;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+public class SourceTree {
+	
+	private ArrayList<TreeData> nodes = new ArrayList<TreeData>();
+
+	public ArrayList<TreeData> getNodes() {
+		return nodes;
+	}
+
+	public void setNodes(ArrayList<TreeData> nodes) {
+		this.nodes = nodes;
+	}
+	
+	public void addNode(TreeData node){
+		nodes.add(node);
+	}
+	
+	public void sortByNodeId(){
+		nodes.sort(new Comparator<TreeData>(){
+
+			@Override
+			public int compare(TreeData node1, TreeData node2) {
+
+				return node1.getNodeId().compareTo(node2.getNodeId());
+			}
+			
+		});
+	}
+	
+	public void printSource(){
+		this.sortByNodeId();
+		
+		String result =  "";
+		
+		for (TreeData node: nodes){
+			if (node.getType().equals("token")){
+				
+				result += " " + node.getText();
+				
+				if (node.getText().equals(";")){
+					result += "\n";
+				}
+			}
+		}
+		
+		System.out.println(result);
+	}
+
+}

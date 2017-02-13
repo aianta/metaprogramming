@@ -1,0 +1,141 @@
+package metaprogramming.generator;
+
+import metaprogramming.antlr.*;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.antlr.runtime.tree.Tree;
+import org.antlr.v4.gui.Trees;
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+
+public class Generate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		SourceFile dataJava = 
+				new SourceFile ("Data", "src/metaprogramming/source/Data.java", ".java");
+
+		SourceFile declareField =
+				new SourceFile ("declareField", "src/metaprogramming/microservice/declareField.java", ".java");
+		
+		SourceFile dataModelJava = 
+				new SourceFile ("DataModel", "src/metaprogramming/source/DataModel.java", ".java");
+		
+		SourceFile dataFieldPanelJava =
+				new SourceFile ("DataFieldPanel", "src/metaprogramming/source/DataFieldPanel.java", ".java");
+		
+		SourceFile simpleDataViewerJava =
+				new SourceFile ("SimpleDataViewer","src/metaprogramming/source/SimpleDataViewer.java", ".java");
+	
+		dataJava.load();
+		dataModelJava.load();
+		dataFieldPanelJava.load();
+		simpleDataViewerJava.load();
+		
+		Java8Parser javaParser = processJava (dataJava);
+		javaParser.addParseListener(new DataJavaListener());
+	
+		saveRuleNames(javaParser);
+		createJSON("Data.json");
+		
+		ParseTree dataJavaTree = javaParser.compilationUnit();
+		
+		finalizeJSON("Data.json");
+		
+		Trees.inspect(dataJavaTree, javaParser);
+		
+		dataJava.addJSON("Data.json");
+		dataJava.printSource();
+		dataJava.printSource("Data");
+	}
+	
+
+	public static Java8Parser processJava (SourceFile javaFile){
+		
+		ANTLRInputStream antlrInput = new ANTLRInputStream(javaFile.getData());
+		Java8Lexer lexer = new Java8Lexer (antlrInput);
+		CommonTokenStream tokenStream = new CommonTokenStream(lexer);
+		Java8Parser parser = new Java8Parser(tokenStream);
+		
+		
+		return parser;
+	}
+	
+	public static void createJSON (String path){
+		
+		try{
+			File f = new File (path);
+			FileWriter fw = new FileWriter(f);
+			
+			fw.append("{\n");
+			fw.append("\t\"nodes\": [\n");
+			
+			fw.close();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void finalizeJSON (String path){
+		try{
+			File f = new File (path);
+			FileWriter fw = new FileWriter(f, true);
+			
+			fw.append("\t]\n");
+			fw.append("}\n");
+			
+			fw.close();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	
+	public static void saveRuleNames(Java8Parser parser){
+		
+		try{
+			
+			String [] ruleNames = parser.getRuleNames();
+			
+			File json = new File ("RuleData.json");
+			FileWriter fw = new FileWriter(json);
+			
+			fw.append("{\n");
+			fw.append("\t\"rules\": [\n");
+			
+			for (int i = 0; i < ruleNames.length; i++){
+				
+				fw.append("\t\t{\n");
+				fw.append("\t\t\t\"name\": \"" + ruleNames[i]+ "\",\n" );
+				fw.append("\t\t\t\"index\":\"" + i + "\"\n");
+				
+				if (i != (ruleNames.length-1)){
+					fw.append("\t\t},\n");
+				}else{
+					fw.append("\t\t}\n");
+				} 
+			}
+			
+			fw.append("\t]\n");
+			fw.append("}\n");
+			
+			fw.close();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		
+
+		
+	}
+}

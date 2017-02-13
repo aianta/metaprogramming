@@ -1,0 +1,11 @@
+package metaprogramming.generator;
+
+public class DeclareFieldProcessor implements SourceProcessor {
+
+	public DeclareFieldProcessor(SourceFile sourceFile) {
+		super(sourceFile);
+	}
+	
+	
+
+}

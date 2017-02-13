@@ -1,0 +1,68 @@
+package metaprogramming.generator;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+
+import metaprogramming.antlr.Java8Lexer;
+import metaprogramming.antlr.Java8Parser;
+
+public class SourceProcessor {
+	
+	SourceFile sourceFile;
+	
+	public SourceProcessor (SourceFile sourceFile){
+		this.sourceFile = sourceFile;
+	}
+	
+	public void processFile (){
+		
+	}
+	
+	public static Java8Parser processJava (SourceFile javaFile){
+		
+		ANTLRInputStream antlrInput = new ANTLRInputStream(javaFile.getData());
+		Java8Lexer lexer = new Java8Lexer (antlrInput);
+		CommonTokenStream tokenStream = new CommonTokenStream(lexer);
+		Java8Parser parser = new Java8Parser(tokenStream);
+		
+		
+		return parser;
+	}
+	
+	public static void createJSON (String path){
+		
+		try{
+			File f = new File (path);
+			FileWriter fw = new FileWriter(f);
+			
+			fw.append("{\n");
+			fw.append("\t\"nodes\": [\n");
+			
+			fw.close();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void finalizeJSON (String path){
+		try{
+			File f = new File (path);
+			FileWriter fw = new FileWriter(f, true);
+			
+			fw.append("\t]\n");
+			fw.append("}\n");
+			
+			fw.close();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+
+}

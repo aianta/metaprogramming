@@ -1,0 +1,65 @@
+package metaprogramming.generator;
+
+import metaprogramming.antlr.*;
+
+import org.antlr.v4.runtime.CommonToken;
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.RuleContext;
+import org.antlr.v4.runtime.tree.ErrorNode;
+import org.antlr.v4.runtime.tree.TerminalNode;
+import org.antlr.v4.runtime.tree.TerminalNodeImpl;
+
+import metaprogramming.antlr.Java8BaseListener;
+import metaprogramming.antlr.Java8Listener;
+import metaprogramming.antlr.Java8Parser;
+import metaprogramming.antlr.Java8Parser.*;
+
+public class DataJavaListener extends Java8BaseListener {
+	
+	boolean modifiedDataClass = false;
+
+	public void exitClassBodyDeclaration(Java8Parser.ClassBodyDeclarationContext ctx) {
+		
+		System.out.println(ctx.getText());
+		
+		if (!modifiedDataClass){
+			
+			ParserRuleContext classBodyDeclaration = new Java8Parser.ClassBodyDeclarationContext(ctx, ctx.invokingState);
+			ParserRuleContext classMemberDeclaration = new Java8Parser.ClassMemberDeclarationContext((ParserRuleContext) classBodyDeclaration, classBodyDeclaration.invokingState);
+			ParserRuleContext fieldDeclaration = new Java8Parser.FieldDeclarationContext(classMemberDeclaration, classMemberDeclaration.invokingState);
+				
+				//Declare the new field private
+				ParserRuleContext fieldModifier = new Java8Parser.FieldModifierContext(fieldDeclaration, fieldDeclaration.invokingState);
+				
+				TerminalNode privateToken = new TerminalNodeImpl(new CommonToken(33));
+				fieldModifier.addChild(privateToken);
+				
+				//Declare the new field a String
+				ParserRuleContext unannType = new Java8Parser.UnannTypeContext(fieldDeclaration, fieldDeclaration.invokingState);
+				ParserRuleContext unannReferenceType = new Java8Parser.UnannReferenceTypeContext(unannType, unannType.invokingState);
+				ParserRuleContext unannClassOrInterfaceType = new Java8Parser.UnannClassOrInterfaceTypeContext(unannReferenceType, unannReferenceType.invokingState);
+				ParserRuleContext unannClassType_Ifno_unannClassOrInterfaceType = new Java8Parser.UnannClassType_lfno_unannClassOrInterfaceTypeContext(unannClassOrInterfaceType, unannClassOrInterfaceType.invokingState);
+				
+				TerminalNode stringToken = new TerminalNodeImpl(new CommonToken(55, "String"));
+				unannClassType_Ifno_unannClassOrInterfaceType.addChild(stringToken);
+				
+				//Declare the new field name
+				ParserRuleContext variableDeclaratorList = new Java8Parser.VariableDeclaratorListContext(fieldDeclaration, fieldDeclaration.invokingState);
+				ParserRuleContext variableDeclarator = new Java8Parser.VariableDeclaratorContext(variableDeclaratorList, variableDeclaratorList.invokingState);
+				ParserRuleContext variableDeclaratorId = new Java8Parser.VariableDeclaratorIdContext(variableDeclarator, variableDeclarator.invokingState);
+				
+				TerminalNode fieldName = new TerminalNodeImpl(new CommonToken(55, "testString"));
+				variableDeclaratorId.addChild(fieldName);
+				
+				//Dont forget the semi colon;
+				TerminalNode semicolon = new TerminalNodeImpl(new CommonToken(63, ";"));
+				fieldDeclaration.addChild(semicolon);
+				
+			ctx.getParent().addChild(classBodyDeclaration);
+			
+			modifiedDataClass = true;
+		}
+		
+	}
+
+}

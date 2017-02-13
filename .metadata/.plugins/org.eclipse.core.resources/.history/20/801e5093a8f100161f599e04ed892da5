@@ -1,0 +1,105 @@
+package metaprogramming.generator;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+import com.google.gson.Gson;
+
+public class SourceTree {
+	
+	private ArrayList<TreeData> nodes = new ArrayList<TreeData>();
+	private ArrayList<TreeData> targets = new ArrayList<TreeData>();
+	
+	public void findTargets (){
+		for (TreeData node: nodes){
+			if (node.getTarget() != null){
+				this.targets.add(node);
+			}
+		}
+	}
+	
+	public TreeData findTarget(String targetName){
+		for (TreeData target:targets){
+			if (target.getTarget().equals(targetName)){
+				return target;
+			}
+		}
+		
+		return null;
+	}
+	
+	public ArrayList<TreeData> getNodes() {
+		return nodes;
+	}
+
+	public void setNodes(ArrayList<TreeData> nodes) {
+		this.nodes = nodes;
+	}
+	
+	public void addNode(TreeData node){
+		nodes.add(node);
+	}
+	
+	public void sortByNodeId(){
+		nodes.sort(new Comparator<TreeData>(){
+
+			@Override
+			public int compare(TreeData node1, TreeData node2) {
+
+				return node1.getNodeId().compareTo(node2.getNodeId());
+			}
+			
+		});
+	}
+	
+	public String printSource(){
+		this.sortByNodeId();
+		
+		String result =  "";
+		
+		for (TreeData node: nodes){
+			if (node.getType().equals("token")){
+				
+				if (!node.getText().equals("<EOF>")){
+					result += " " + node.getText();
+					
+					switch (node.getText()){
+					case ";":
+						result += "\n";
+						break;
+					case "{":
+						result += "\n";
+						break;
+					case "}":
+						result += "\n";
+						break;	
+					}
+				}
+			}
+		}
+		
+		return result;
+	}
+	
+	public String toJson(){
+		Gson gson = new Gson();
+		return gson.toJson(nodes);
+		
+	}
+	
+	public void mergeTreeAtTarget(SourceTree microservice, String targetName){
+		
+		
+	}
+	
+	public TreeData getRoot(){
+		for (TreeData node: nodes){
+			if (node.getParentId() == -1){
+				return node;
+			}
+		}
+		
+		return null;
+	}
+
+}

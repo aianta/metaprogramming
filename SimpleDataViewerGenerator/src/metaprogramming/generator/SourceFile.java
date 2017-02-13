@@ -3,17 +3,38 @@ package metaprogramming.generator;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+
 public class SourceFile {
+	
+	public enum Type {
+		MICROSERVICE,CODEFILE
+	}
 	
 	private String name;
 	private String data;
 	private String path;
+	private String jsonPath;
+	private String jsonData;
+	private SourceTree sourceTree;
+	private String fileExtension;
 	
-	public SourceFile (String name, String path){
+	public SourceFile (String name, String path, String fileExtension){
 		this.name = name;
 		this.path = path;
+		this.fileExtension = fileExtension;
+	}
+	
+	public TreeData getTarget(String targetName){
+		this.sourceTree.findTargets();
+		return this.sourceTree.findTarget(targetName);
+	}
+	
+	public void applyMicroservice (SourceTree microservice, String targetName){
+		this.sourceTree.mergeTreeAtTarget(microservice, targetName);
 	}
 	
 	public String getFileName() {
@@ -62,4 +83,107 @@ public class SourceFile {
 		this.data = source;
 	}
 
+	public String getJsonPath() {
+		return jsonPath;
+	}
+
+	public void setJsonPath(String jsonPath) {
+		this.jsonPath = jsonPath;
+	}
+	
+	public void addJSON(String path){
+		this.jsonPath = path;
+		
+		String result = "";
+		
+		try{
+			File f = new File (jsonPath);
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);
+			
+			String line = br.readLine();
+			
+			while (line != null){
+				result += line;
+				line = br.readLine();
+			}
+			
+			br.close();
+			
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		
+		this.jsonData = result;
+		
+		Gson gson = new Gson();
+		this.sourceTree = gson.fromJson(this.jsonData, SourceTree.class);
+	}
+
+	public void printSource(){
+		if (this.sourceTree == null){
+			System.out.println("No Source Tree to print!");
+		}else{
+			System.out.println(this.sourceTree.printSource());
+		}
+	}
+	
+	public void printSource(String fileName){
+		if (this.sourceTree == null){
+			System.out.println("No Source Tree to print!");
+		}else{
+			
+			try{
+				File f = new File ("./src/metaprogramming/target/" + fileName + fileExtension);
+				FileWriter fw = new FileWriter(f);
+				
+				fw.append(this.sourceTree.printSource());
+				
+				fw.close();
+				
+			}catch (IOException e){
+				e.printStackTrace();
+			}
+			
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void printJSON(String fileName){
+		if (this.sourceTree == null){
+			System.out.println("No Source Tree to print!");
+		}else{
+			
+			try{
+				File f = new File ("./src/metaprogramming/target/" + fileName + "-gen.json" );
+				FileWriter fw = new FileWriter(f);
+				
+				fw.append("{\"nodes\":");
+				fw.append(this.sourceTree.toJson());
+				fw.append("}");
+				
+				fw.close();
+				
+			}catch (IOException e){
+				e.printStackTrace();
+			}
+			
+		}
+	}
+
+	public SourceTree getSourceTree() {
+		return sourceTree;
+	}
+
+	public void setSourceTree(SourceTree sourceTree) {
+		this.sourceTree = sourceTree;
+	}
 }

@@ -1,0 +1,94 @@
+{
+	"nodes": [
+		{
+			"nodeId": "19",
+			"type": "token",
+			"text": "private",
+			"parentId":"18"
+		},
+		{
+			"nodeId": "18",
+			"type": "rule",
+			"ruleIndex": "53",
+			"parentId":"17"
+		},
+		{
+			"nodeId": "24",
+			"type": "token",
+			"text": "String",
+			"parentId":"23"
+		},
+		{
+			"nodeId": "23",
+			"type": "rule",
+			"ruleIndex": "64",
+			"parentId":"22"
+		},
+		{
+			"nodeId": "22",
+			"type": "rule",
+			"ruleIndex": "61",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "21",
+			"type": "rule",
+			"ruleIndex": "60",
+			"parentId":"20"
+		},
+		{
+			"nodeId": "20",
+			"type": "rule",
+			"ruleIndex": "58",
+			"parentId":"17"
+		},
+		{
+			"nodeId": "28",
+			"type": "token",
+			"text": "field",
+			"parentId":"27"
+		},
+		{
+			"nodeId": "27",
+			"type": "rule",
+			"ruleIndex": "56",
+			"parentId":"26"
+		},
+		{
+			"nodeId": "26",
+			"type": "rule",
+			"ruleIndex": "55",
+			"parentId":"25"
+		},
+		{
+			"nodeId": "25",
+			"type": "rule",
+			"ruleIndex": "54",
+			"parentId":"17"
+		},
+		{
+			"nodeId": "29",
+			"type": "token",
+			"text": ";",
+			"parentId":"17"
+		},
+		{
+			"nodeId": "17",
+			"type": "rule",
+			"ruleIndex": "52",
+			"parentId":"16"
+		},
+		{
+			"nodeId": "16",
+			"type": "rule",
+			"ruleIndex": "51",
+			"parentId":"15"
+		},
+		{
+			"nodeId": "15",
+			"type": "rule",
+			"ruleIndex": "50",
+			"parentId": "-1"
+		}
+	]
+}

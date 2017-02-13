@@ -1,4 +1,4 @@
-package metaprogramming.source;
+package metaprogramming.demo;
 
 import java.util.Comparator;
 

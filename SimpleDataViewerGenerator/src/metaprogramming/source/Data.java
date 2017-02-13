@@ -1,8 +1,10 @@
-package metaprogramming.source;
+package metaprogramming.demo;
 
 public class Data {
 	
 	private String firstName;
+	private String lastName;
+	private Integer id;
 	
 	public String getFirstName() {
 		return this.firstName;
@@ -10,6 +12,22 @@ public class Data {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 

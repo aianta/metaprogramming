@@ -1,0 +1,9 @@
+package metaprogramming.generator;
+
+import java.util.ArrayList;
+
+public class SourceTree {
+	
+	ArrayList<TreeData> nodes = new ArrayList<TreeData>();
+
+}

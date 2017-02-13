@@ -1,0 +1,34 @@
+package metaprogramming.generator;
+
+import org.antlr.v4.runtime.tree.ParseTree;
+
+import metaprogramming.antlr.Java8Parser;
+
+public class DeclareFieldProcessor extends SourceProcessor {
+
+	public DeclareFieldProcessor(SourceFile sourceFile) {
+		super(sourceFile);
+	}
+	
+	public void processFile (){
+		
+		Java8Parser javaParser = processJava (this.sourceFile);
+		javaParser.addParseListener(new DataJavaListener());
+	
+		saveRuleNames(javaParser);
+		createJSON("./src/metaprogramming/microservice/json/" + this.sourceFile.getName() + ".json");
+		
+		ParseTree dataJavaTree = javaParser.classBodyDeclaration();
+		
+		finalizeJSON("./src/metaprogramming/microservice/json/" + this.sourceFile.getName() + ".json");
+		
+		//Trees.inspect(dataJavaTree, javaParser);
+		
+		this.sourceFile.addJSON("./src/metaprogramming/microservice/json/" + this.sourceFile.getName() + ".json");
+		this.sourceFile.printSource();
+		this.sourceFile.printSource("Data");
+		
+	}
+	
+
+}

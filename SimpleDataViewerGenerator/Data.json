@@ -1,0 +1,600 @@
+		{
+			"nodeId": "2",
+			"type": "token",
+			"text": "package",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "3",
+			"type": "token",
+			"text": "metaprogramming",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "4",
+			"type": "token",
+			"text": ".",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "5",
+			"type": "token",
+			"text": "demo",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "6",
+			"type": "token",
+			"text": ";",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "11",
+			"type": "token",
+			"text": "public",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "12",
+			"type": "token",
+			"text": "class",
+			"parentId":"9"
+		},
+		{
+			"nodeId": "13",
+			"type": "token",
+			"text": "Data",
+			"parentId":"9"
+		},
+		{
+			"nodeId": "15",
+			"type": "token",
+			"text": "{",
+			"parentId":"14"
+		},
+		{
+			"nodeId": "20",
+			"type": "token",
+			"text": "private",
+			"parentId":"19"
+		},
+		{
+			"nodeId": "25",
+			"type": "token",
+			"text": "String",
+			"parentId":"24"
+		},
+		{
+			"nodeId": "29",
+			"type": "token",
+			"text": "firstName",
+			"parentId":"28"
+		},
+		{
+			"nodeId": "30",
+			"type": "token",
+			"text": ";",
+			"parentId":"18"
+		},
+		{
+			"nodeId": "35",
+			"type": "token",
+			"text": "private",
+			"parentId":"34"
+		},
+		{
+			"nodeId": "40",
+			"type": "token",
+			"text": "String",
+			"parentId":"39"
+		},
+		{
+			"nodeId": "44",
+			"type": "token",
+			"text": "lastName",
+			"parentId":"43"
+		},
+		{
+			"nodeId": "45",
+			"type": "token",
+			"text": ";",
+			"parentId":"33"
+		},
+		{
+			"nodeId": "50",
+			"type": "token",
+			"text": "private",
+			"parentId":"49"
+		},
+		{
+			"nodeId": "55",
+			"type": "token",
+			"text": "Integer",
+			"parentId":"54"
+		},
+		{
+			"nodeId": "59",
+			"type": "token",
+			"text": "id",
+			"parentId":"58"
+		},
+		{
+			"nodeId": "60",
+			"type": "token",
+			"text": ";",
+			"parentId":"48"
+		},
+		{
+			"nodeId": "65",
+			"type": "token",
+			"text": "public",
+			"parentId":"64"
+		},
+		{
+			"nodeId": "72",
+			"type": "token",
+			"text": "String",
+			"parentId":"71"
+		},
+		{
+			"nodeId": "74",
+			"type": "token",
+			"text": "getFirstName",
+			"parentId":"73"
+		},
+		{
+			"nodeId": "75",
+			"type": "token",
+			"text": "(",
+			"parentId":"73"
+		},
+		{
+			"nodeId": "76",
+			"type": "token",
+			"text": ")",
+			"parentId":"73"
+		},
+		{
+			"nodeId": "79",
+			"type": "token",
+			"text": "{",
+			"parentId":"78"
+		},
+		{
+			"nodeId": "85",
+			"type": "token",
+			"text": "return",
+			"parentId":"84"
+		},
+		{
+			"nodeId": "104",
+			"type": "token",
+			"text": "this",
+			"parentId":"103"
+		},
+		{
+			"nodeId": "107",
+			"type": "token",
+			"text": ".",
+			"parentId":"106"
+		},
+		{
+			"nodeId": "108",
+			"type": "token",
+			"text": "firstName",
+			"parentId":"106"
+		},
+		{
+			"nodeId": "109",
+			"type": "token",
+			"text": ";",
+			"parentId":"84"
+		},
+		{
+			"nodeId": "110",
+			"type": "token",
+			"text": "}",
+			"parentId":"78"
+		},
+		{
+			"nodeId": "115",
+			"type": "token",
+			"text": "public",
+			"parentId":"114"
+		},
+		{
+			"nodeId": "118",
+			"type": "token",
+			"text": "void",
+			"parentId":"117"
+		},
+		{
+			"nodeId": "120",
+			"type": "token",
+			"text": "setFirstName",
+			"parentId":"119"
+		},
+		{
+			"nodeId": "121",
+			"type": "token",
+			"text": "(",
+			"parentId":"119"
+		},
+		{
+			"nodeId": "129",
+			"type": "token",
+			"text": "String",
+			"parentId":"128"
+		},
+		{
+			"nodeId": "131",
+			"type": "token",
+			"text": "firstName",
+			"parentId":"130"
+		},
+		{
+			"nodeId": "132",
+			"type": "token",
+			"text": ")",
+			"parentId":"119"
+		},
+		{
+			"nodeId": "135",
+			"type": "token",
+			"text": "{",
+			"parentId":"134"
+		},
+		{
+			"nodeId": "147",
+			"type": "token",
+			"text": "this",
+			"parentId":"146"
+		},
+		{
+			"nodeId": "148",
+			"type": "token",
+			"text": ".",
+			"parentId":"144"
+		},
+		{
+			"nodeId": "149",
+			"type": "token",
+			"text": "firstName",
+			"parentId":"144"
+		},
+		{
+			"nodeId": "151",
+			"type": "token",
+			"text": "=",
+			"parentId":"150"
+		},
+		{
+			"nodeId": "169",
+			"type": "token",
+			"text": "firstName",
+			"parentId":"168"
+		},
+		{
+			"nodeId": "170",
+			"type": "token",
+			"text": ";",
+			"parentId":"140"
+		},
+		{
+			"nodeId": "171",
+			"type": "token",
+			"text": "}",
+			"parentId":"134"
+		},
+		{
+			"nodeId": "176",
+			"type": "token",
+			"text": "public",
+			"parentId":"175"
+		},
+		{
+			"nodeId": "183",
+			"type": "token",
+			"text": "String",
+			"parentId":"182"
+		},
+		{
+			"nodeId": "185",
+			"type": "token",
+			"text": "getLastName",
+			"parentId":"184"
+		},
+		{
+			"nodeId": "186",
+			"type": "token",
+			"text": "(",
+			"parentId":"184"
+		},
+		{
+			"nodeId": "187",
+			"type": "token",
+			"text": ")",
+			"parentId":"184"
+		},
+		{
+			"nodeId": "190",
+			"type": "token",
+			"text": "{",
+			"parentId":"189"
+		},
+		{
+			"nodeId": "196",
+			"type": "token",
+			"text": "return",
+			"parentId":"195"
+		},
+		{
+			"nodeId": "214",
+			"type": "token",
+			"text": "lastName",
+			"parentId":"213"
+		},
+		{
+			"nodeId": "215",
+			"type": "token",
+			"text": ";",
+			"parentId":"195"
+		},
+		{
+			"nodeId": "216",
+			"type": "token",
+			"text": "}",
+			"parentId":"189"
+		},
+		{
+			"nodeId": "221",
+			"type": "token",
+			"text": "public",
+			"parentId":"220"
+		},
+		{
+			"nodeId": "224",
+			"type": "token",
+			"text": "void",
+			"parentId":"223"
+		},
+		{
+			"nodeId": "226",
+			"type": "token",
+			"text": "setLastName",
+			"parentId":"225"
+		},
+		{
+			"nodeId": "227",
+			"type": "token",
+			"text": "(",
+			"parentId":"225"
+		},
+		{
+			"nodeId": "235",
+			"type": "token",
+			"text": "String",
+			"parentId":"234"
+		},
+		{
+			"nodeId": "237",
+			"type": "token",
+			"text": "lastName",
+			"parentId":"236"
+		},
+		{
+			"nodeId": "238",
+			"type": "token",
+			"text": ")",
+			"parentId":"225"
+		},
+		{
+			"nodeId": "241",
+			"type": "token",
+			"text": "{",
+			"parentId":"240"
+		},
+		{
+			"nodeId": "253",
+			"type": "token",
+			"text": "this",
+			"parentId":"252"
+		},
+		{
+			"nodeId": "254",
+			"type": "token",
+			"text": ".",
+			"parentId":"250"
+		},
+		{
+			"nodeId": "255",
+			"type": "token",
+			"text": "lastName",
+			"parentId":"250"
+		},
+		{
+			"nodeId": "257",
+			"type": "token",
+			"text": "=",
+			"parentId":"256"
+		},
+		{
+			"nodeId": "275",
+			"type": "token",
+			"text": "lastName",
+			"parentId":"274"
+		},
+		{
+			"nodeId": "276",
+			"type": "token",
+			"text": ";",
+			"parentId":"246"
+		},
+		{
+			"nodeId": "277",
+			"type": "token",
+			"text": "}",
+			"parentId":"240"
+		},
+		{
+			"nodeId": "282",
+			"type": "token",
+			"text": "public",
+			"parentId":"281"
+		},
+		{
+			"nodeId": "289",
+			"type": "token",
+			"text": "Integer",
+			"parentId":"288"
+		},
+		{
+			"nodeId": "291",
+			"type": "token",
+			"text": "getId",
+			"parentId":"290"
+		},
+		{
+			"nodeId": "292",
+			"type": "token",
+			"text": "(",
+			"parentId":"290"
+		},
+		{
+			"nodeId": "293",
+			"type": "token",
+			"text": ")",
+			"parentId":"290"
+		},
+		{
+			"nodeId": "296",
+			"type": "token",
+			"text": "{",
+			"parentId":"295"
+		},
+		{
+			"nodeId": "302",
+			"type": "token",
+			"text": "return",
+			"parentId":"301"
+		},
+		{
+			"nodeId": "320",
+			"type": "token",
+			"text": "id",
+			"parentId":"319"
+		},
+		{
+			"nodeId": "321",
+			"type": "token",
+			"text": ";",
+			"parentId":"301"
+		},
+		{
+			"nodeId": "322",
+			"type": "token",
+			"text": "}",
+			"parentId":"295"
+		},
+		{
+			"nodeId": "327",
+			"type": "token",
+			"text": "public",
+			"parentId":"326"
+		},
+		{
+			"nodeId": "330",
+			"type": "token",
+			"text": "void",
+			"parentId":"329"
+		},
+		{
+			"nodeId": "332",
+			"type": "token",
+			"text": "setId",
+			"parentId":"331"
+		},
+		{
+			"nodeId": "333",
+			"type": "token",
+			"text": "(",
+			"parentId":"331"
+		},
+		{
+			"nodeId": "341",
+			"type": "token",
+			"text": "Integer",
+			"parentId":"340"
+		},
+		{
+			"nodeId": "343",
+			"type": "token",
+			"text": "id",
+			"parentId":"342"
+		},
+		{
+			"nodeId": "344",
+			"type": "token",
+			"text": ")",
+			"parentId":"331"
+		},
+		{
+			"nodeId": "347",
+			"type": "token",
+			"text": "{",
+			"parentId":"346"
+		},
+		{
+			"nodeId": "359",
+			"type": "token",
+			"text": "this",
+			"parentId":"358"
+		},
+		{
+			"nodeId": "360",
+			"type": "token",
+			"text": ".",
+			"parentId":"356"
+		},
+		{
+			"nodeId": "361",
+			"type": "token",
+			"text": "id",
+			"parentId":"356"
+		},
+		{
+			"nodeId": "363",
+			"type": "token",
+			"text": "=",
+			"parentId":"362"
+		},
+		{
+			"nodeId": "381",
+			"type": "token",
+			"text": "id",
+			"parentId":"380"
+		},
+		{
+			"nodeId": "382",
+			"type": "token",
+			"text": ";",
+			"parentId":"352"
+		},
+		{
+			"nodeId": "383",
+			"type": "token",
+			"text": "}",
+			"parentId":"346"
+		},
+		{
+			"nodeId": "384",
+			"type": "token",
+			"text": "}",
+			"parentId":"14"
+		},
+		{
+			"nodeId": "385",
+			"type": "token",
+			"text": "<EOF>",
+			"parentId":"0"
+		},
