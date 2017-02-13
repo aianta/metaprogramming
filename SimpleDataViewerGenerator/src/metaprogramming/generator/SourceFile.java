@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
@@ -26,6 +27,11 @@ public class SourceFile {
 		this.name = name;
 		this.path = path;
 		this.fileExtension = fileExtension;
+	}
+	
+	public ArrayList<TreeData> getTargets(){
+		this.sourceTree.findTargets();
+		return this.sourceTree.getTargets();
 	}
 	
 	public TreeData getTarget(String targetName){
@@ -119,6 +125,7 @@ public class SourceFile {
 		
 		Gson gson = new Gson();
 		this.sourceTree = gson.fromJson(this.jsonData, SourceTree.class);
+		this.sourceTree.setRelatedSourceFile(this.name);
 	}
 
 	public void printSource(){

@@ -1,10 +1,9 @@
  package metaprogramming . demo ;
  public class Data {
- public String getCustomName ( ) {
- return this . customName ;
+ public String getSalary ( ) {
+ return this . salary ;
  }
- private String customName2 ;
- private String customName ;
+ private String salary ;
  private String firstName ;
  private String lastName ;
  private Integer id ;

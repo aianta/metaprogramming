@@ -9,13 +9,26 @@ public class SourceTree {
 	
 	private ArrayList<TreeData> nodes = new ArrayList<TreeData>();
 	private ArrayList<TreeData> targets = new ArrayList<TreeData>();
+	private boolean searchedForTargets = false;
+	private String relatedSourceFile;
 	
 	public void findTargets (){
-		for (TreeData node: nodes){
-			if (node.getTarget() != null){
-				this.targets.add(node);
+		
+		if (searchedForTargets == false){
+			for (TreeData node: nodes){
+				if (node.getTarget() != null){
+					this.targets.add(node);
+				}
 			}
+			
+			searchedForTargets = true;
 		}
+		
+	}
+	
+	public ArrayList<TreeData> getTargets(){
+		this.findTargets();
+		return this.targets;
 	}
 	
 	public TreeData findTarget(String targetName){
@@ -148,6 +161,18 @@ public class SourceTree {
 		}
 		
 		return null;
+	}
+
+	public String getRelatedSourceFile() {
+		return relatedSourceFile;
+	}
+
+	public void setRelatedSourceFile(String relatedSourceFile) {
+		this.relatedSourceFile = relatedSourceFile;
+		
+		for (TreeData node: nodes){
+			node.setRelatedSourceFile(relatedSourceFile);
+		}
 	}
 
 }

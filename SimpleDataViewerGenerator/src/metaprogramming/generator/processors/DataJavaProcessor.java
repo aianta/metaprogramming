@@ -27,7 +27,7 @@ public class DataJavaProcessor extends SourceProcessor{
 		
 		finalizeJSON("./src/metaprogramming/target/json/" + super.getSourceFile().getName() + ".json");
 		
-		Trees.inspect(dataJavaTree, javaParser);
+		//Trees.inspect(dataJavaTree, javaParser);
 		
 		//super.getSourceFile().addJSON("./src/metaprogramming/target/json/" + super.getSourceFile().getName() + ".json");
 		//super.getSourceFile().addJSON("./src/metaprogramming/target/" + super.getSourceFile().getName() + "-gen.json");
@@ -37,7 +37,7 @@ public class DataJavaProcessor extends SourceProcessor{
 		//super.getSourceFile().printSource("Data");
 		//super.getSourceFile().printJSON("Data");
 		
-		System.out.println(super.getSourceFile().getTarget("declareField"));
+		//System.out.println(super.getSourceFile().getTarget("declareField"));
 		
 	}
 	

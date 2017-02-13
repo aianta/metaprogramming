@@ -8,6 +8,7 @@ public class TreeData {
 	private Integer parentId;
 	private String ruleIndex;
 	private String target;
+	private String relatedSourceFile;
 	
 	public Integer getNodeId() {
 		return nodeId;
@@ -50,6 +51,12 @@ public class TreeData {
 				getParentId() + " type: " + getType() + " ruleIndex: " +
 				getRuleIndex() + " target: " + getTarget() + "\n";
 		return result;	
+	}
+	public String getRelatedSourceFile() {
+		return relatedSourceFile;
+	}
+	public void setRelatedSourceFile(String relatedSourceFile) {
+		this.relatedSourceFile = relatedSourceFile;
 	}
 
 }

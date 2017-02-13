@@ -53,7 +53,7 @@
 			"type": "token",
 			"text": "getFirstName",
 			"parentId":"12",
-			"target": "methodName"
+			"target": "getterMethodName"
 		},
 		{
 			"nodeId": "14",

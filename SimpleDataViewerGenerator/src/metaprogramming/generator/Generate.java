@@ -1,83 +1,52 @@
 package metaprogramming.generator;
 
-import metaprogramming.antlr.*;
-import metaprogramming.generator.processors.DataJavaProcessor;
-import metaprogramming.generator.processors.DeclareFieldProcessor;
-import metaprogramming.generator.processors.GetFieldProcessor;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
-import org.antlr.runtime.tree.Tree;
-import org.antlr.v4.gui.Trees;
-import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
+import metaprogramming.jobs.NewDataFieldJob;
 
-public class Generate {
+public class Generate extends JFrame {
 
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Generate frame = new Generate();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
-		SourceFile dataJava = 
-				new SourceFile ("Data", "src/metaprogramming/source/Data.java", ".java");
-
-		SourceFile declareField =
-				new SourceFile ("declareField", "src/metaprogramming/microservice/declareField.java", ".java");
+	/**
+	 * Create the frame.
+	 */
+	public Generate() {
+		setTitle("SimpleDataViewerGenerator");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
 		
-		SourceFile getField =
-				new SourceFile ("getField", "src/metaprogramming/microservice/fieldGetter.java", ".java");
+		NewDataFieldJob job = new NewDataFieldJob();
+		job.analyzeTargets();
 		
-		SourceFile dataModelJava = 
-				new SourceFile ("DataModel", "src/metaprogramming/source/DataModel.java", ".java");
-		
-		SourceFile dataFieldPanelJava =
-				new SourceFile ("DataFieldPanel", "src/metaprogramming/source/DataFieldPanel.java", ".java");
-		
-		SourceFile simpleDataViewerJava =
-				new SourceFile ("SimpleDataViewer","src/metaprogramming/source/SimpleDataViewer.java", ".java");
-	
-		dataJava.load();
-		declareField.load();
-		getField.load();
-		dataModelJava.load();
-		dataFieldPanelJava.load();
-		simpleDataViewerJava.load();
-		
-		DataJavaProcessor dataJavaProcessor = new DataJavaProcessor(dataJava);
-		dataJavaProcessor.processFile();
-		
-		DeclareFieldProcessor declareFieldProcessor = new DeclareFieldProcessor(declareField);
-		declareFieldProcessor.processFile();
-		declareFieldProcessor.getSourceFile().getTarget("fieldName").setText("customName");
-		
-		dataJavaProcessor.getSourceFile()
-			.applyMicroservice(
-					declareFieldProcessor.getSourceFile().getSourceTree(),
-					"declareField");
-		
-		declareFieldProcessor.processFile();
-		declareFieldProcessor.getSourceFile().getTarget("fieldName").setText("customName2");
-		dataJavaProcessor.getSourceFile()
-			.applyMicroservice(
-					declareFieldProcessor.getSourceFile().getSourceTree(),
-					"declareField");
-		
-		GetFieldProcessor getFieldProcessor = new GetFieldProcessor(getField);
-		getFieldProcessor.processFile();
-		getFieldProcessor.getSourceFile().getTarget("fieldName").setText("customName");
-		getFieldProcessor.getSourceFile().getTarget("methodName").setText("getCustomName");
-		dataJavaProcessor.getSourceFile()
-			.applyMicroservice(
-					getFieldProcessor.getSourceFile().getSourceTree(),
-					"declareField");
-		
-		dataJavaProcessor.generate();
+		JobPanel jobPanel = new JobPanel (job);
+		contentPane.add(jobPanel);
 		
 	}
-	
+
 }
