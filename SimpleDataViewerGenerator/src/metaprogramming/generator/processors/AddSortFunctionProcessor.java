@@ -7,17 +7,20 @@ import metaprogramming.generator.SourceFile;
 import metaprogramming.generator.SourceProcessor;
 import metaprogramming.generator.listeners.DataJavaListener;
 import metaprogramming.generator.listeners.DeclareFieldListener;
+import metaprogramming.generator.listeners.GetFieldListener;
+import metaprogramming.generator.listeners.SetFieldListener;
+import metaprogramming.generator.listeners.addSortFunctionListener;
 
-public class DeclareFieldProcessor extends SourceProcessor {
+public class AddSortFunctionProcessor extends SourceProcessor {
 
-	public DeclareFieldProcessor(SourceFile sourceFile) {
+	public AddSortFunctionProcessor(SourceFile sourceFile) {
 		super(sourceFile);
 	}
 	
 	public void processFile (){
 		
 		Java8Parser javaParser = processJava (super.getSourceFile());
-		javaParser.addParseListener(new DeclareFieldListener());
+		javaParser.addParseListener(new addSortFunctionListener());
 	
 		saveRuleNames(javaParser);
 		createJSON("./src/metaprogramming/microservice/json/" + super.getSourceFile().getName() + ".json");

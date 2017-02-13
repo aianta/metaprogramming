@@ -1,11 +1,14 @@
 package metaprogramming.generator;
 
+import java.util.ArrayList;
+
 import javax.swing.JTextField;
 
 public class ExplicitTarget {
 	
 	TreeData target;
 	JTextField textField;
+
 	
 	public ExplicitTarget(TreeData target, JTextField textField){
 		this.target = target;

@@ -111,5 +111,11 @@ public class SourceProcessor {
 		this.sourceFile.printJSON(sourceFile.getName());
 		this.sourceFile.printSource(sourceFile.getName() + "-gen");
 	}
+	
+	public void generate (String customName){
+		this.sourceFile.printJSON(customName);
+		this.sourceFile.printSource(customName + "-gen");
+
+	}
 
 }

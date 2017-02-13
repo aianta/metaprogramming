@@ -65,7 +65,7 @@
 			"type": "token",
 			"text": "{",
 			"parentId":"14",
-            "target":"declareField"
+            "target":"classBody"
 		},
 		{
 			"nodeId": "20",

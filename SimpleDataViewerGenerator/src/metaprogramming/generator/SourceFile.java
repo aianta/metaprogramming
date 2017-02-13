@@ -126,6 +126,8 @@ public class SourceFile {
 		Gson gson = new Gson();
 		this.sourceTree = gson.fromJson(this.jsonData, SourceTree.class);
 		this.sourceTree.setRelatedSourceFile(this.name);
+		
+		this.sourceTree.findTargets();
 	}
 
 	public void printSource(){

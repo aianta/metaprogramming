@@ -82,7 +82,6 @@ public class SimpleDataViewer extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
-		//Load First Name Data Field
 		DataFieldPanel firstNamePanel = new DataFieldPanel(firstNameModel, this);
 		GridBagConstraints gbc_firstNamePanel = new GridBagConstraints();
 		gbc_firstNamePanel.fill = GridBagConstraints.BOTH;
@@ -90,7 +89,6 @@ public class SimpleDataViewer extends JFrame {
 		gbc_firstNamePanel.gridy = 0;
 		contentPane.add(firstNamePanel, gbc_firstNamePanel);
 		
-		//Load Last Name Data Field
 		DataFieldPanel lastNamePanel = new DataFieldPanel(lastNameModel, this);
 		GridBagConstraints gbc_lastNamePanel = new GridBagConstraints();
 		gbc_lastNamePanel.fill = GridBagConstraints.BOTH;
@@ -98,7 +96,6 @@ public class SimpleDataViewer extends JFrame {
 		gbc_lastNamePanel.gridy = 0;
 		contentPane.add(lastNamePanel, gbc_lastNamePanel);
 		
-		//Load Id Data Field
 		DataFieldPanel idPanel = new DataFieldPanel(idModel, this);
 		GridBagConstraints gbc_idPanel = new GridBagConstraints();
 		gbc_idPanel.fill = GridBagConstraints.BOTH;

@@ -9,6 +9,7 @@ public class TreeData {
 	private String ruleIndex;
 	private String target;
 	private String relatedSourceFile;
+
 	
 	public Integer getNodeId() {
 		return nodeId;

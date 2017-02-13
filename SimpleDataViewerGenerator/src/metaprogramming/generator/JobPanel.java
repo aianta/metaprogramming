@@ -16,6 +16,7 @@ import java.awt.Color;
 public class JobPanel extends JPanel {
 	
 	private ArrayList<ExplicitTarget> panelExplicitTargets = new ArrayList<ExplicitTarget>(); 
+
 	private Job j;
 
 	/**
@@ -75,8 +76,34 @@ public class JobPanel extends JPanel {
 			add(explicitValue, gbc_explicitValue);
 			explicitValue.setColumns(10);
 			
-			this.panelExplicitTargets.add(new ExplicitTarget(explicitTargets.get(i), explicitValue));
+			ExplicitTarget newTarget = new ExplicitTarget(explicitTargets.get(i), explicitValue);
+			
+			this.panelExplicitTargets.add(newTarget);
 		}
+		
+
+		
+		JButton btnRunJob = new JButton("Run Job");
+		GridBagConstraints gbc_btnRunJob = new GridBagConstraints();
+		gbc_btnRunJob.insets = new Insets(0, 0, 5, 5);
+		gbc_btnRunJob.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnRunJob.gridx = 2;
+		gbc_btnRunJob.gridy = 0;
+		add(btnRunJob, gbc_btnRunJob);
+		
+		btnRunJob.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				for (ExplicitTarget t: panelExplicitTargets){
+					t.getTarget().setText(t.getTextField().getText());
+				}
+				
+				j.run();
+			}
+			
+		});
 		
 		JLabel lblNewLabel_1 = new JLabel("Calling Microservice:");
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
@@ -99,29 +126,6 @@ public class JobPanel extends JPanel {
 		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 1;
 		add(lblNewLabel, gbc_lblNewLabel);
-		
-		JButton btnRunJob = new JButton("Run Job");
-		GridBagConstraints gbc_btnRunJob = new GridBagConstraints();
-		gbc_btnRunJob.insets = new Insets(0, 0, 0, 5);
-		gbc_btnRunJob.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnRunJob.gridwidth = 4;
-		gbc_btnRunJob.gridx = 0;
-		gbc_btnRunJob.gridy = 8;
-		add(btnRunJob, gbc_btnRunJob);
-		
-		btnRunJob.addActionListener(new ActionListener(){
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				for (ExplicitTarget t: panelExplicitTargets){
-					t.getTarget().setText(t.getTextField().getText());
-				}
-				
-				j.run();
-			}
-			
-		});
 
 	}
 

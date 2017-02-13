@@ -1,0 +1,934 @@
+{
+	"nodes": [
+		{
+			"nodeId": "2",
+			"type": "token",
+			"text": "package",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "3",
+			"type": "token",
+			"text": "metaprogramming",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "4",
+			"type": "token",
+			"text": ".",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "5",
+			"type": "token",
+			"text": "demo",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "6",
+			"type": "token",
+			"text": ";",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "1",
+			"type": "rule",
+			"ruleIndex": "33",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "9",
+			"type": "token",
+			"text": "import",
+			"parentId":"8"
+		},
+		{
+			"nodeId": "12",
+			"type": "token",
+			"text": "java",
+			"parentId":"11"
+		},
+		{
+			"nodeId": "11",
+			"type": "rule",
+			"ruleIndex": "28",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "14",
+			"type": "token",
+			"text": ".",
+			"parentId":"13"
+		},
+		{
+			"nodeId": "15",
+			"type": "token",
+			"text": "util",
+			"parentId":"13"
+		},
+		{
+			"nodeId": "13",
+			"type": "rule",
+			"ruleIndex": "28",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "16",
+			"type": "token",
+			"text": ".",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "17",
+			"type": "token",
+			"text": "Comparator",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "10",
+			"type": "rule",
+			"ruleIndex": "27",
+			"parentId":"8"
+		},
+		{
+			"nodeId": "18",
+			"type": "token",
+			"text": ";",
+			"parentId":"8"
+		},
+		{
+			"nodeId": "8",
+			"type": "rule",
+			"ruleIndex": "36",
+			"parentId":"7"
+		},
+		{
+			"nodeId": "7",
+			"type": "rule",
+			"ruleIndex": "35",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "23",
+			"type": "token",
+			"text": "public",
+			"parentId":"22"
+		},
+		{
+			"nodeId": "22",
+			"type": "rule",
+			"ruleIndex": "43",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "24",
+			"type": "token",
+			"text": "class",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "25",
+			"type": "token",
+			"text": "FirstNameComparator",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "27",
+			"type": "token",
+			"text": "implements",
+			"parentId":"26"
+		},
+		{
+			"nodeId": "31",
+			"type": "token",
+			"text": "Comparator",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "33",
+			"type": "token",
+			"text": "<",
+			"parentId":"32"
+		},
+		{
+			"nodeId": "39",
+			"type": "token",
+			"text": "Data",
+			"parentId":"38"
+		},
+		{
+			"nodeId": "38",
+			"type": "rule",
+			"ruleIndex": "10",
+			"parentId":"37"
+		},
+		{
+			"nodeId": "37",
+			"type": "rule",
+			"ruleIndex": "7",
+			"parentId":"36"
+		},
+		{
+			"nodeId": "36",
+			"type": "rule",
+			"ruleIndex": "6",
+			"parentId":"35"
+		},
+		{
+			"nodeId": "35",
+			"type": "rule",
+			"ruleIndex": "23",
+			"parentId":"34"
+		},
+		{
+			"nodeId": "34",
+			"type": "rule",
+			"ruleIndex": "22",
+			"parentId":"32"
+		},
+		{
+			"nodeId": "40",
+			"type": "token",
+			"text": ">",
+			"parentId":"32"
+		},
+		{
+			"nodeId": "32",
+			"type": "rule",
+			"ruleIndex": "21",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "30",
+			"type": "rule",
+			"ruleIndex": "8",
+			"parentId":"29"
+		},
+		{
+			"nodeId": "29",
+			"type": "rule",
+			"ruleIndex": "11",
+			"parentId":"28"
+		},
+		{
+			"nodeId": "28",
+			"type": "rule",
+			"ruleIndex": "48",
+			"parentId":"26"
+		},
+		{
+			"nodeId": "26",
+			"type": "rule",
+			"ruleIndex": "47",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "42",
+			"type": "token",
+			"text": "{",
+			"parentId":"41"
+		},
+		{
+			"nodeId": "49",
+			"type": "token",
+			"text": "@",
+			"parentId":"48"
+		},
+		{
+			"nodeId": "51",
+			"type": "token",
+			"text": "Override",
+			"parentId":"50"
+		},
+		{
+			"nodeId": "50",
+			"type": "rule",
+			"ruleIndex": "27",
+			"parentId":"48"
+		},
+		{
+			"nodeId": "48",
+			"type": "rule",
+			"ruleIndex": "122",
+			"parentId":"47"
+		},
+		{
+			"nodeId": "47",
+			"type": "rule",
+			"ruleIndex": "115",
+			"parentId":"46"
+		},
+		{
+			"nodeId": "46",
+			"type": "rule",
+			"ruleIndex": "71",
+			"parentId":"45"
+		},
+		{
+			"nodeId": "53",
+			"type": "token",
+			"text": "public",
+			"parentId":"52"
+		},
+		{
+			"nodeId": "52",
+			"type": "rule",
+			"ruleIndex": "71",
+			"parentId":"45"
+		},
+		{
+			"nodeId": "60",
+			"type": "token",
+			"text": "int",
+			"parentId":"59"
+		},
+		{
+			"nodeId": "59",
+			"type": "rule",
+			"ruleIndex": "4",
+			"parentId":"58"
+		},
+		{
+			"nodeId": "58",
+			"type": "rule",
+			"ruleIndex": "3",
+			"parentId":"57"
+		},
+		{
+			"nodeId": "57",
+			"type": "rule",
+			"ruleIndex": "59",
+			"parentId":"56"
+		},
+		{
+			"nodeId": "56",
+			"type": "rule",
+			"ruleIndex": "58",
+			"parentId":"55"
+		},
+		{
+			"nodeId": "55",
+			"type": "rule",
+			"ruleIndex": "73",
+			"parentId":"54"
+		},
+		{
+			"nodeId": "62",
+			"type": "token",
+			"text": "compare",
+			"parentId":"61"
+		},
+		{
+			"nodeId": "63",
+			"type": "token",
+			"text": "(",
+			"parentId":"61"
+		},
+		{
+			"nodeId": "71",
+			"type": "token",
+			"text": "Data",
+			"parentId":"70"
+		},
+		{
+			"nodeId": "70",
+			"type": "rule",
+			"ruleIndex": "64",
+			"parentId":"69"
+		},
+		{
+			"nodeId": "69",
+			"type": "rule",
+			"ruleIndex": "61",
+			"parentId":"68"
+		},
+		{
+			"nodeId": "68",
+			"type": "rule",
+			"ruleIndex": "60",
+			"parentId":"67"
+		},
+		{
+			"nodeId": "67",
+			"type": "rule",
+			"ruleIndex": "58",
+			"parentId":"66"
+		},
+		{
+			"nodeId": "73",
+			"type": "token",
+			"text": "data1",
+			"parentId":"72"
+		},
+		{
+			"nodeId": "72",
+			"type": "rule",
+			"ruleIndex": "56",
+			"parentId":"66"
+		},
+		{
+			"nodeId": "66",
+			"type": "rule",
+			"ruleIndex": "77",
+			"parentId":"65"
+		},
+		{
+			"nodeId": "65",
+			"type": "rule",
+			"ruleIndex": "76",
+			"parentId":"64"
+		},
+		{
+			"nodeId": "74",
+			"type": "token",
+			"text": ",",
+			"parentId":"64"
+		},
+		{
+			"nodeId": "81",
+			"type": "token",
+			"text": "Data",
+			"parentId":"80"
+		},
+		{
+			"nodeId": "80",
+			"type": "rule",
+			"ruleIndex": "64",
+			"parentId":"79"
+		},
+		{
+			"nodeId": "79",
+			"type": "rule",
+			"ruleIndex": "61",
+			"parentId":"78"
+		},
+		{
+			"nodeId": "78",
+			"type": "rule",
+			"ruleIndex": "60",
+			"parentId":"77"
+		},
+		{
+			"nodeId": "77",
+			"type": "rule",
+			"ruleIndex": "58",
+			"parentId":"76"
+		},
+		{
+			"nodeId": "83",
+			"type": "token",
+			"text": "data2",
+			"parentId":"82"
+		},
+		{
+			"nodeId": "82",
+			"type": "rule",
+			"ruleIndex": "56",
+			"parentId":"76"
+		},
+		{
+			"nodeId": "76",
+			"type": "rule",
+			"ruleIndex": "77",
+			"parentId":"75"
+		},
+		{
+			"nodeId": "75",
+			"type": "rule",
+			"ruleIndex": "79",
+			"parentId":"64"
+		},
+		{
+			"nodeId": "64",
+			"type": "rule",
+			"ruleIndex": "75",
+			"parentId":"61"
+		},
+		{
+			"nodeId": "84",
+			"type": "token",
+			"text": ")",
+			"parentId":"61"
+		},
+		{
+			"nodeId": "61",
+			"type": "rule",
+			"ruleIndex": "74",
+			"parentId":"54"
+		},
+		{
+			"nodeId": "54",
+			"type": "rule",
+			"ruleIndex": "72",
+			"parentId":"45"
+		},
+		{
+			"nodeId": "87",
+			"type": "token",
+			"text": "{",
+			"parentId":"86"
+		},
+		{
+			"nodeId": "93",
+			"type": "token",
+			"text": "return",
+			"parentId":"92"
+		},
+		{
+			"nodeId": "114",
+			"type": "token",
+			"text": "data1",
+			"parentId":"113"
+		},
+		{
+			"nodeId": "113",
+			"type": "rule",
+			"ruleIndex": "27",
+			"parentId":"112"
+		},
+		{
+			"nodeId": "115",
+			"type": "token",
+			"text": ".",
+			"parentId":"112"
+		},
+		{
+			"nodeId": "116",
+			"type": "token",
+			"text": "getFirstName",
+			"parentId":"112"
+		},
+		{
+			"nodeId": "117",
+			"type": "token",
+			"text": "(",
+			"parentId":"112"
+		},
+		{
+			"nodeId": "118",
+			"type": "token",
+			"text": ")",
+			"parentId":"112"
+		},
+		{
+			"nodeId": "112",
+			"type": "rule",
+			"ruleIndex": "198",
+			"parentId":"111"
+		},
+		{
+			"nodeId": "111",
+			"type": "rule",
+			"ruleIndex": "183",
+			"parentId":"110"
+		},
+		{
+			"nodeId": "121",
+			"type": "token",
+			"text": ".",
+			"parentId":"120"
+		},
+		{
+			"nodeId": "122",
+			"type": "token",
+			"text": "compareTo",
+			"parentId":"120"
+		},
+		{
+			"nodeId": "123",
+			"type": "token",
+			"text": "(",
+			"parentId":"120"
+		},
+		{
+			"nodeId": "145",
+			"type": "token",
+			"text": "data2",
+			"parentId":"144"
+		},
+		{
+			"nodeId": "144",
+			"type": "rule",
+			"ruleIndex": "27",
+			"parentId":"143"
+		},
+		{
+			"nodeId": "146",
+			"type": "token",
+			"text": ".",
+			"parentId":"143"
+		},
+		{
+			"nodeId": "147",
+			"type": "token",
+			"text": "getFirstName",
+			"parentId":"143"
+		},
+		{
+			"nodeId": "148",
+			"type": "token",
+			"text": "(",
+			"parentId":"143"
+		},
+		{
+			"nodeId": "149",
+			"type": "token",
+			"text": ")",
+			"parentId":"143"
+		},
+		{
+			"nodeId": "143",
+			"type": "rule",
+			"ruleIndex": "198",
+			"parentId":"142"
+		},
+		{
+			"nodeId": "142",
+			"type": "rule",
+			"ruleIndex": "183",
+			"parentId":"141"
+		},
+		{
+			"nodeId": "141",
+			"type": "rule",
+			"ruleIndex": "176",
+			"parentId":"140"
+		},
+		{
+			"nodeId": "140",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"139"
+		},
+		{
+			"nodeId": "139",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"138"
+		},
+		{
+			"nodeId": "138",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"137"
+		},
+		{
+			"nodeId": "137",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"136"
+		},
+		{
+			"nodeId": "136",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"135"
+		},
+		{
+			"nodeId": "135",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"134"
+		},
+		{
+			"nodeId": "134",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"133"
+		},
+		{
+			"nodeId": "133",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"132"
+		},
+		{
+			"nodeId": "132",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"131"
+		},
+		{
+			"nodeId": "131",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"130"
+		},
+		{
+			"nodeId": "130",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"129"
+		},
+		{
+			"nodeId": "129",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"128"
+		},
+		{
+			"nodeId": "128",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"127"
+		},
+		{
+			"nodeId": "127",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"126"
+		},
+		{
+			"nodeId": "126",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"125"
+		},
+		{
+			"nodeId": "125",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"124"
+		},
+		{
+			"nodeId": "124",
+			"type": "rule",
+			"ruleIndex": "199",
+			"parentId":"120"
+		},
+		{
+			"nodeId": "150",
+			"type": "token",
+			"text": ")",
+			"parentId":"120"
+		},
+		{
+			"nodeId": "120",
+			"type": "rule",
+			"ruleIndex": "197",
+			"parentId":"119"
+		},
+		{
+			"nodeId": "119",
+			"type": "rule",
+			"ruleIndex": "180",
+			"parentId":"110"
+		},
+		{
+			"nodeId": "110",
+			"type": "rule",
+			"ruleIndex": "176",
+			"parentId":"109"
+		},
+		{
+			"nodeId": "109",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"108"
+		},
+		{
+			"nodeId": "108",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"107"
+		},
+		{
+			"nodeId": "107",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"106"
+		},
+		{
+			"nodeId": "106",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"105"
+		},
+		{
+			"nodeId": "105",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"104"
+		},
+		{
+			"nodeId": "104",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"103"
+		},
+		{
+			"nodeId": "103",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"102"
+		},
+		{
+			"nodeId": "102",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"101"
+		},
+		{
+			"nodeId": "101",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"100"
+		},
+		{
+			"nodeId": "100",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"99"
+		},
+		{
+			"nodeId": "99",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"98"
+		},
+		{
+			"nodeId": "98",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"97"
+		},
+		{
+			"nodeId": "97",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"96"
+		},
+		{
+			"nodeId": "96",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"95"
+		},
+		{
+			"nodeId": "95",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"94"
+		},
+		{
+			"nodeId": "94",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"92"
+		},
+		{
+			"nodeId": "151",
+			"type": "token",
+			"text": ";",
+			"parentId":"92"
+		},
+		{
+			"nodeId": "92",
+			"type": "rule",
+			"ruleIndex": "163",
+			"parentId":"91"
+		},
+		{
+			"nodeId": "91",
+			"type": "rule",
+			"ruleIndex": "133",
+			"parentId":"90"
+		},
+		{
+			"nodeId": "90",
+			"type": "rule",
+			"ruleIndex": "131",
+			"parentId":"89"
+		},
+		{
+			"nodeId": "89",
+			"type": "rule",
+			"ruleIndex": "128",
+			"parentId":"88"
+		},
+		{
+			"nodeId": "88",
+			"type": "rule",
+			"ruleIndex": "127",
+			"parentId":"86"
+		},
+		{
+			"nodeId": "152",
+			"type": "token",
+			"text": "}",
+			"parentId":"86"
+		},
+		{
+			"nodeId": "86",
+			"type": "rule",
+			"ruleIndex": "126",
+			"parentId":"85"
+		},
+		{
+			"nodeId": "85",
+			"type": "rule",
+			"ruleIndex": "84",
+			"parentId":"45"
+		},
+		{
+			"nodeId": "45",
+			"type": "rule",
+			"ruleIndex": "70",
+			"parentId":"44"
+		},
+		{
+			"nodeId": "44",
+			"type": "rule",
+			"ruleIndex": "51",
+			"parentId":"43"
+		},
+		{
+			"nodeId": "43",
+			"type": "rule",
+			"ruleIndex": "50",
+			"parentId":"41"
+		},
+		{
+			"nodeId": "153",
+			"type": "token",
+			"text": "}",
+			"parentId":"41"
+		},
+		{
+			"nodeId": "41",
+			"type": "rule",
+			"ruleIndex": "49",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "21",
+			"type": "rule",
+			"ruleIndex": "42",
+			"parentId":"20"
+		},
+		{
+			"nodeId": "20",
+			"type": "rule",
+			"ruleIndex": "41",
+			"parentId":"19"
+		},
+		{
+			"nodeId": "19",
+			"type": "rule",
+			"ruleIndex": "40",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "154",
+			"type": "token",
+			"text": "<EOF>",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "0",
+			"type": "rule",
+			"ruleIndex": "32",
+			"parentId": "-1"
+		}
+	]
+}

@@ -1,9 +1,12 @@
  package metaprogramming . demo ;
  public class Data {
- public String getSalary ( ) {
- return this . salary ;
+ private String test ;
+ public void test ( String test ) {
+ this . test = test ;
  }
- private String salary ;
+ public String test ( ) {
+ return this . test ;
+ }
  private String firstName ;
  private String lastName ;
  private Integer id ;

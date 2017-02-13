@@ -47,6 +47,7 @@ public class Generate extends JFrame {
 		JobPanel jobPanel = new JobPanel (job);
 		contentPane.add(jobPanel);
 		
+		this.pack();
 	}
 
 }

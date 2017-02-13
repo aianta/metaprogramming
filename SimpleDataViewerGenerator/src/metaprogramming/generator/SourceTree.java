@@ -85,7 +85,10 @@ public class SourceTree {
 						break;
 					case "}":
 						result += "\n";
-						break;	
+						break;
+					case "Override":
+						result += "\n";
+						break;
 					}
 				}
 			}
@@ -105,7 +108,7 @@ public class SourceTree {
 		TreeData target = this.findTarget(targetName);
 		
 		if (target == null){
-			System.out.println("Target not found!");
+			System.out.println("Target " + targetName + " not found!");
 			System.exit(1);
 		}
 		

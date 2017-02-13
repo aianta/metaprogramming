@@ -7,10 +7,11 @@ import metaprogramming.antlr.Java8Parser;
 import metaprogramming.generator.SourceFile;
 import metaprogramming.generator.SourceProcessor;
 import metaprogramming.generator.listeners.DataJavaListener;
+import metaprogramming.generator.listeners.DataModelJavaListener;
 
-public class DataJavaProcessor extends SourceProcessor{
+public class DataModelJavaProcessor extends SourceProcessor{
 
-	public DataJavaProcessor(SourceFile sourceFile) {
+	public DataModelJavaProcessor(SourceFile sourceFile) {
 		super(sourceFile);
 		// TODO Auto-generated constructor stub
 	}
@@ -18,7 +19,7 @@ public class DataJavaProcessor extends SourceProcessor{
 	public void processFile (){
 		
 		Java8Parser javaParser = processJava (super.getSourceFile());
-		javaParser.addParseListener(new DataJavaListener());
+		javaParser.addParseListener(new DataModelJavaListener());
 	
 		saveRuleNames(javaParser);
 		createJSON("./src/metaprogramming/target/json/" + super.getSourceFile().getName() + ".json");
