@@ -1,0 +1,25 @@
+ package metaprogramming . demo ;
+ import javax . swing . AbstractListModel ;
+ public class JobTitleListModel extends DataFieldAbstractListModel {
+ private DataModel model ;
+ private String listName = "Job Title" ;
+ public JobTitleListModel ( DataModel model ) {
+ this . model = model ;
+ }
+ @ Override
+ public Object getElementAt ( int index ) {
+ return model . get ( index ) . getJobTitle ( ) ;
+ }
+ @ Override
+ public int getSize ( ) {
+ return model . getSize ( ) ;
+ }
+ @ Override
+ public void sort ( ) {
+ model . sortByJobTitle ( ) ;
+ }
+ @ Override
+ public String getListName ( ) {
+ return this . listName ;
+ }
+ }

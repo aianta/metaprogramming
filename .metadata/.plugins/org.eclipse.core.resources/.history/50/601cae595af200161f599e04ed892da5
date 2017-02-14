@@ -1,0 +1,72 @@
+package assignment;
+
+import becker.robots.*;
+
+
+public class SteepleChaser extends Racer
+{
+
+	private boolean movedUpHurdleLast = false;
+	
+	public SteepleChaser(City aCity, int str, int ave, Direction dir)
+	{
+		super(aCity, str, ave, dir);
+	}
+	
+	
+	
+	public void jumpHurdle()
+	{		
+		moveUpHurdle();
+		//moveDownHurdle();
+	
+	}	
+	
+	public void raceStride()
+	{
+
+		this.jumpHurdle();
+		if (frontIsClear()){
+			this.move();
+		}
+		
+
+	}
+	
+	public void moveUpHurdle()
+	{
+		if (frontIsClear() != true)
+		{
+			turnLeft();
+			movedUpHurdleLast = true;
+		}else{
+			if (frontIsClear() && movedUpHurdleLast){
+				turnRight();
+				movedUpHurdleLast = false;
+			}
+		}	
+				
+	}
+	
+		
+	public void moveDownHurdle()
+	{
+		move();
+		turnRight();
+		move();
+		turnRight();
+		if (frontIsClear())
+		{
+			move();
+		}
+		else
+		{
+			turnLeft();
+		}
+	}
+		
+}
+	
+	
+	
+

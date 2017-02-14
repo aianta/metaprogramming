@@ -1,0 +1,667 @@
+{
+	"nodes": [
+		{
+			"nodeId": "8",
+			"type": "token",
+			"text": "DataFieldPanel",
+			"parentId":"7"
+		},
+		{
+			"nodeId": "7",
+			"type": "rule",
+			"ruleIndex": "64",
+			"parentId":"6"
+		},
+		{
+			"nodeId": "6",
+			"type": "rule",
+			"ruleIndex": "61",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "5",
+			"type": "rule",
+			"ruleIndex": "60",
+			"parentId":"4"
+		},
+		{
+			"nodeId": "4",
+			"type": "rule",
+			"ruleIndex": "58",
+			"parentId":"3"
+		},
+		{
+			"nodeId": "12",
+			"type": "token",
+			"text": "firstNamePanel",
+			"parentId":"11",
+			"target":"fieldPanel"
+		},
+		{
+			"nodeId": "11",
+			"type": "rule",
+			"ruleIndex": "56",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "13",
+			"type": "token",
+			"text": "=",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "34",
+			"type": "token",
+			"text": "new",
+			"parentId":"33"
+		},
+		{
+			"nodeId": "35",
+			"type": "token",
+			"text": "DataFieldPanel",
+			"parentId":"33"
+		},
+		{
+			"nodeId": "36",
+			"type": "token",
+			"text": "(",
+			"parentId":"33"
+		},
+		{
+			"nodeId": "55",
+			"type": "token",
+			"text": "firstNameModel",
+			"parentId":"54",
+			"target":"fieldListModelInstance"
+		},
+		{
+			"nodeId": "54",
+			"type": "rule",
+			"ruleIndex": "29",
+			"parentId":"53"
+		},
+		{
+			"nodeId": "53",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"52"
+		},
+		{
+			"nodeId": "52",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"51"
+		},
+		{
+			"nodeId": "51",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"50"
+		},
+		{
+			"nodeId": "50",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"49"
+		},
+		{
+			"nodeId": "49",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"48"
+		},
+		{
+			"nodeId": "48",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"47"
+		},
+		{
+			"nodeId": "47",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"46"
+		},
+		{
+			"nodeId": "46",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"45"
+		},
+		{
+			"nodeId": "45",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"44"
+		},
+		{
+			"nodeId": "44",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"43"
+		},
+		{
+			"nodeId": "43",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"42"
+		},
+		{
+			"nodeId": "42",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"41"
+		},
+		{
+			"nodeId": "41",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"40"
+		},
+		{
+			"nodeId": "40",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"39"
+		},
+		{
+			"nodeId": "39",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"38"
+		},
+		{
+			"nodeId": "38",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"37"
+		},
+		{
+			"nodeId": "56",
+			"type": "token",
+			"text": ",",
+			"parentId":"37"
+		},
+		{
+			"nodeId": "75",
+			"type": "token",
+			"text": "this",
+			"parentId":"74"
+		},
+		{
+			"nodeId": "74",
+			"type": "rule",
+			"ruleIndex": "183",
+			"parentId":"73"
+		},
+		{
+			"nodeId": "73",
+			"type": "rule",
+			"ruleIndex": "176",
+			"parentId":"72"
+		},
+		{
+			"nodeId": "72",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"71"
+		},
+		{
+			"nodeId": "71",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"70"
+		},
+		{
+			"nodeId": "70",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"69"
+		},
+		{
+			"nodeId": "69",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"68"
+		},
+		{
+			"nodeId": "68",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"67"
+		},
+		{
+			"nodeId": "67",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"66"
+		},
+		{
+			"nodeId": "66",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"65"
+		},
+		{
+			"nodeId": "65",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"64"
+		},
+		{
+			"nodeId": "64",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"63"
+		},
+		{
+			"nodeId": "63",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"62"
+		},
+		{
+			"nodeId": "62",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"61"
+		},
+		{
+			"nodeId": "61",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"60"
+		},
+		{
+			"nodeId": "60",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"59"
+		},
+		{
+			"nodeId": "59",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"58"
+		},
+		{
+			"nodeId": "58",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"57"
+		},
+		{
+			"nodeId": "57",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"37"
+		},
+		{
+			"nodeId": "37",
+			"type": "rule",
+			"ruleIndex": "199",
+			"parentId":"33"
+		},
+		{
+			"nodeId": "76",
+			"type": "token",
+			"text": ")",
+			"parentId":"33"
+		},
+		{
+			"nodeId": "33",
+			"type": "rule",
+			"ruleIndex": "188",
+			"parentId":"32"
+		},
+		{
+			"nodeId": "32",
+			"type": "rule",
+			"ruleIndex": "183",
+			"parentId":"31"
+		},
+		{
+			"nodeId": "31",
+			"type": "rule",
+			"ruleIndex": "176",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "30",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"29"
+		},
+		{
+			"nodeId": "29",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"28"
+		},
+		{
+			"nodeId": "28",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"27"
+		},
+		{
+			"nodeId": "27",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"26"
+		},
+		{
+			"nodeId": "26",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"25"
+		},
+		{
+			"nodeId": "25",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"24"
+		},
+		{
+			"nodeId": "24",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"23"
+		},
+		{
+			"nodeId": "23",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"22"
+		},
+		{
+			"nodeId": "22",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "21",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"20"
+		},
+		{
+			"nodeId": "20",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"19"
+		},
+		{
+			"nodeId": "19",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"18"
+		},
+		{
+			"nodeId": "18",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"17"
+		},
+		{
+			"nodeId": "17",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"16"
+		},
+		{
+			"nodeId": "16",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"15"
+		},
+		{
+			"nodeId": "15",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"14"
+		},
+		{
+			"nodeId": "14",
+			"type": "rule",
+			"ruleIndex": "57",
+			"parentId":"10"
+		},
+		{
+			"nodeId": "10",
+			"type": "rule",
+			"ruleIndex": "55",
+			"parentId":"9"
+		},
+		{
+			"nodeId": "9",
+			"type": "rule",
+			"ruleIndex": "54",
+			"parentId":"3"
+		},
+		{
+			"nodeId": "3",
+			"type": "rule",
+			"ruleIndex": "130",
+			"parentId":"2"
+		},
+		{
+			"nodeId": "77",
+			"type": "token",
+			"text": ";",
+			"parentId":"2"
+		},
+		{
+			"nodeId": "2",
+			"type": "rule",
+			"ruleIndex": "129",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "1",
+			"type": "rule",
+			"ruleIndex": "128",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "85",
+			"type": "token",
+			"text": "contentPane",
+			"parentId":"84"
+		},
+		{
+			"nodeId": "84",
+			"type": "rule",
+			"ruleIndex": "27",
+			"parentId":"83"
+		},
+		{
+			"nodeId": "86",
+			"type": "token",
+			"text": ".",
+			"parentId":"83"
+		},
+		{
+			"nodeId": "87",
+			"type": "token",
+			"text": "add",
+			"parentId":"83"
+		},
+		{
+			"nodeId": "88",
+			"type": "token",
+			"text": "(",
+			"parentId":"83"
+		},
+		{
+			"nodeId": "107",
+			"type": "token",
+			"text": "firstNamePanel",
+			"parentId":"106",
+			"target":"fieldPanel"
+		},
+		{
+			"nodeId": "106",
+			"type": "rule",
+			"ruleIndex": "29",
+			"parentId":"105"
+		},
+		{
+			"nodeId": "105",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"104"
+		},
+		{
+			"nodeId": "104",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"103"
+		},
+		{
+			"nodeId": "103",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"102"
+		},
+		{
+			"nodeId": "102",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"101"
+		},
+		{
+			"nodeId": "101",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"100"
+		},
+		{
+			"nodeId": "100",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"99"
+		},
+		{
+			"nodeId": "99",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"98"
+		},
+		{
+			"nodeId": "98",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"97"
+		},
+		{
+			"nodeId": "97",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"96"
+		},
+		{
+			"nodeId": "96",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"95"
+		},
+		{
+			"nodeId": "95",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"94"
+		},
+		{
+			"nodeId": "94",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"93"
+		},
+		{
+			"nodeId": "93",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"92"
+		},
+		{
+			"nodeId": "92",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"91"
+		},
+		{
+			"nodeId": "91",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"90"
+		},
+		{
+			"nodeId": "90",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"89"
+		},
+		{
+			"nodeId": "89",
+			"type": "rule",
+			"ruleIndex": "199",
+			"parentId":"83"
+		},
+		{
+			"nodeId": "108",
+			"type": "token",
+			"text": ")",
+			"parentId":"83"
+		},
+		{
+			"nodeId": "83",
+			"type": "rule",
+			"ruleIndex": "196",
+			"parentId":"82"
+		},
+		{
+			"nodeId": "82",
+			"type": "rule",
+			"ruleIndex": "138",
+			"parentId":"81"
+		},
+		{
+			"nodeId": "109",
+			"type": "token",
+			"text": ";",
+			"parentId":"81"
+		},
+		{
+			"nodeId": "81",
+			"type": "rule",
+			"ruleIndex": "137",
+			"parentId":"80"
+		},
+		{
+			"nodeId": "80",
+			"type": "rule",
+			"ruleIndex": "133",
+			"parentId":"79"
+		},
+		{
+			"nodeId": "79",
+			"type": "rule",
+			"ruleIndex": "131",
+			"parentId":"78"
+		},
+		{
+			"nodeId": "78",
+			"type": "rule",
+			"ruleIndex": "128",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "0",
+			"type": "rule",
+			"ruleIndex": "127",
+			"parentId": "-1"
+		}
+	]
+}

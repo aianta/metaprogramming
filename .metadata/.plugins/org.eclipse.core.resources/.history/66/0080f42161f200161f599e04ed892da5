@@ -1,0 +1,59 @@
+package assignment;
+
+import java.util.Random;
+
+import becker.robots.*;
+
+
+public class SteepleChaserMain
+{
+
+	public static void main(String[] args) 
+	{
+		City chicago = new City(15,15);
+		SteepleChaser jenner = new SteepleChaser(chicago, 5, 1, Direction.EAST);
+		/*Wall walla = new Wall(chicago, 5, 2, Direction.WEST);
+		Wall wallb = new Wall(chicago, 4, 2, Direction.WEST);
+		Wall wallc = new Wall(chicago, 3, 2, Direction.WEST);
+		Wall wallm = new Wall(chicago, 5, 1, Direction.SOUTH);
+		Wall walld = new Wall(chicago, 5, 2, Direction.SOUTH);
+		Wall walle = new Wall(chicago, 5, 3, Direction.SOUTH);
+		Wall wallf = new Wall(chicago, 5, 4, Direction.SOUTH);
+		Wall wallg = new Wall(chicago, 5, 5, Direction.SOUTH);
+		Wall wallh = new Wall(chicago, 5, 6, Direction.SOUTH);
+		Wall walli = new Wall(chicago, 5, 7, Direction.SOUTH);
+		Wall wallj = new Wall(chicago, 5, 8, Direction.SOUTH);
+		Wall wallk = new Wall(chicago, 5, 9, Direction.SOUTH);
+		Wall walll = new Wall(chicago, 5, 10, Direction.SOUTH);
+		Wall walln = new Wall(chicago, 5, 3, Direction.WEST);
+		Wall wallo = new Wall(chicago, 4, 3, Direction.WEST);
+		Wall wallp = new Wall(chicago, 5, 5, Direction.WEST);*/
+		Random r = new Random();
+		
+		int chanceForHurdle = 5;
+		
+		
+		for (int i = 1; i < 11; i++){
+			Wall base = new Wall (chicago, 5, i, Direction.SOUTH);
+			int dice = r.nextInt(10-1+1) + 1;
+			
+			if (chanceForHurdle < dice){
+				
+				int hurdleHeight = r.nextInt(5-1+1)+1;
+				
+				for (int j = 0; j < hurdleHeight; j++){
+					Wall hurdle = new Wall (chicago,5,j,Direction.WEST);
+				}
+				
+			}
+			
+		}
+		
+		Thing olympicGold = new Thing(chicago, 5, 10);
+		
+		jenner.runRace();
+		
+
+	}
+
+}

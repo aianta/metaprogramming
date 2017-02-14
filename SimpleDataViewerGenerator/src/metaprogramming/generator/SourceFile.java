@@ -172,7 +172,7 @@ public class SourceFile {
 		}else{
 			
 			try{
-				File f = new File ("./src/metaprogramming/target/" + fileName + "-gen.json" );
+				File f = new File ("./src/metaprogramming/target/json/" + fileName + "-targets.json" );
 				FileWriter fw = new FileWriter(f);
 				
 				fw.append("{\"nodes\":");

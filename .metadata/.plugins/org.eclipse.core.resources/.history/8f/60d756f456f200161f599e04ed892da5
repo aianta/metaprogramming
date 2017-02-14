@@ -1,0 +1,47 @@
+package assignment;
+
+import becker.robots.*;
+
+public class Racer extends RobotSE
+{
+	
+	public Racer(City aCity, int str, int ave, Direction dir)
+	{
+		super(aCity, str, ave, dir);
+	}
+
+	public void runRace()
+	{
+		while(!this.canPickThing())
+		{
+			this.raceStride();
+		}
+	}
+	
+	public void raceStride()
+	{
+		if (!this.frontIsClear())
+		{
+			this.jumpHurdle();
+		}
+		
+		else
+		{
+			this.move();
+		}
+	}
+	
+	public void jumpHurdle()
+	{
+		turnLeft();
+		move();
+		turnRight();
+		move();
+		turnRight();
+		move();
+		turnRight();
+	}
+	
+	
+	
+}

@@ -1,0 +1,6 @@
+DataFieldPanel firstNamePanel = new DataFieldPanel(firstNameModel, this);
+GridBagConstraints gbc_firstNamePanel = new GridBagConstraints();
+gbc_firstNamePanel.fill = GridBagConstraints.BOTH;
+gbc_firstNamePanel.gridx = 0;
+gbc_firstNamePanel.gridy = 0;
+contentPane.add(firstNamePanel, gbc_firstNamePanel);

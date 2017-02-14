@@ -1,0 +1,952 @@
+{
+	"rules": [
+		{
+			"name": "literal",
+			"index":"0"
+		},
+		{
+			"name": "type",
+			"index":"1"
+		},
+		{
+			"name": "primitiveType",
+			"index":"2"
+		},
+		{
+			"name": "numericType",
+			"index":"3"
+		},
+		{
+			"name": "integralType",
+			"index":"4"
+		},
+		{
+			"name": "floatingPointType",
+			"index":"5"
+		},
+		{
+			"name": "referenceType",
+			"index":"6"
+		},
+		{
+			"name": "classOrInterfaceType",
+			"index":"7"
+		},
+		{
+			"name": "classType",
+			"index":"8"
+		},
+		{
+			"name": "classType_lf_classOrInterfaceType",
+			"index":"9"
+		},
+		{
+			"name": "classType_lfno_classOrInterfaceType",
+			"index":"10"
+		},
+		{
+			"name": "interfaceType",
+			"index":"11"
+		},
+		{
+			"name": "interfaceType_lf_classOrInterfaceType",
+			"index":"12"
+		},
+		{
+			"name": "interfaceType_lfno_classOrInterfaceType",
+			"index":"13"
+		},
+		{
+			"name": "typeVariable",
+			"index":"14"
+		},
+		{
+			"name": "arrayType",
+			"index":"15"
+		},
+		{
+			"name": "dims",
+			"index":"16"
+		},
+		{
+			"name": "typeParameter",
+			"index":"17"
+		},
+		{
+			"name": "typeParameterModifier",
+			"index":"18"
+		},
+		{
+			"name": "typeBound",
+			"index":"19"
+		},
+		{
+			"name": "additionalBound",
+			"index":"20"
+		},
+		{
+			"name": "typeArguments",
+			"index":"21"
+		},
+		{
+			"name": "typeArgumentList",
+			"index":"22"
+		},
+		{
+			"name": "typeArgument",
+			"index":"23"
+		},
+		{
+			"name": "wildcard",
+			"index":"24"
+		},
+		{
+			"name": "wildcardBounds",
+			"index":"25"
+		},
+		{
+			"name": "packageName",
+			"index":"26"
+		},
+		{
+			"name": "typeName",
+			"index":"27"
+		},
+		{
+			"name": "packageOrTypeName",
+			"index":"28"
+		},
+		{
+			"name": "expressionName",
+			"index":"29"
+		},
+		{
+			"name": "methodName",
+			"index":"30"
+		},
+		{
+			"name": "ambiguousName",
+			"index":"31"
+		},
+		{
+			"name": "compilationUnit",
+			"index":"32"
+		},
+		{
+			"name": "packageDeclaration",
+			"index":"33"
+		},
+		{
+			"name": "packageModifier",
+			"index":"34"
+		},
+		{
+			"name": "importDeclaration",
+			"index":"35"
+		},
+		{
+			"name": "singleTypeImportDeclaration",
+			"index":"36"
+		},
+		{
+			"name": "typeImportOnDemandDeclaration",
+			"index":"37"
+		},
+		{
+			"name": "singleStaticImportDeclaration",
+			"index":"38"
+		},
+		{
+			"name": "staticImportOnDemandDeclaration",
+			"index":"39"
+		},
+		{
+			"name": "typeDeclaration",
+			"index":"40"
+		},
+		{
+			"name": "classDeclaration",
+			"index":"41"
+		},
+		{
+			"name": "normalClassDeclaration",
+			"index":"42"
+		},
+		{
+			"name": "classModifier",
+			"index":"43"
+		},
+		{
+			"name": "typeParameters",
+			"index":"44"
+		},
+		{
+			"name": "typeParameterList",
+			"index":"45"
+		},
+		{
+			"name": "superclass",
+			"index":"46"
+		},
+		{
+			"name": "superinterfaces",
+			"index":"47"
+		},
+		{
+			"name": "interfaceTypeList",
+			"index":"48"
+		},
+		{
+			"name": "classBody",
+			"index":"49"
+		},
+		{
+			"name": "classBodyDeclaration",
+			"index":"50"
+		},
+		{
+			"name": "classMemberDeclaration",
+			"index":"51"
+		},
+		{
+			"name": "fieldDeclaration",
+			"index":"52"
+		},
+		{
+			"name": "fieldModifier",
+			"index":"53"
+		},
+		{
+			"name": "variableDeclaratorList",
+			"index":"54"
+		},
+		{
+			"name": "variableDeclarator",
+			"index":"55"
+		},
+		{
+			"name": "variableDeclaratorId",
+			"index":"56"
+		},
+		{
+			"name": "variableInitializer",
+			"index":"57"
+		},
+		{
+			"name": "unannType",
+			"index":"58"
+		},
+		{
+			"name": "unannPrimitiveType",
+			"index":"59"
+		},
+		{
+			"name": "unannReferenceType",
+			"index":"60"
+		},
+		{
+			"name": "unannClassOrInterfaceType",
+			"index":"61"
+		},
+		{
+			"name": "unannClassType",
+			"index":"62"
+		},
+		{
+			"name": "unannClassType_lf_unannClassOrInterfaceType",
+			"index":"63"
+		},
+		{
+			"name": "unannClassType_lfno_unannClassOrInterfaceType",
+			"index":"64"
+		},
+		{
+			"name": "unannInterfaceType",
+			"index":"65"
+		},
+		{
+			"name": "unannInterfaceType_lf_unannClassOrInterfaceType",
+			"index":"66"
+		},
+		{
+			"name": "unannInterfaceType_lfno_unannClassOrInterfaceType",
+			"index":"67"
+		},
+		{
+			"name": "unannTypeVariable",
+			"index":"68"
+		},
+		{
+			"name": "unannArrayType",
+			"index":"69"
+		},
+		{
+			"name": "methodDeclaration",
+			"index":"70"
+		},
+		{
+			"name": "methodModifier",
+			"index":"71"
+		},
+		{
+			"name": "methodHeader",
+			"index":"72"
+		},
+		{
+			"name": "result",
+			"index":"73"
+		},
+		{
+			"name": "methodDeclarator",
+			"index":"74"
+		},
+		{
+			"name": "formalParameterList",
+			"index":"75"
+		},
+		{
+			"name": "formalParameters",
+			"index":"76"
+		},
+		{
+			"name": "formalParameter",
+			"index":"77"
+		},
+		{
+			"name": "variableModifier",
+			"index":"78"
+		},
+		{
+			"name": "lastFormalParameter",
+			"index":"79"
+		},
+		{
+			"name": "receiverParameter",
+			"index":"80"
+		},
+		{
+			"name": "throws_",
+			"index":"81"
+		},
+		{
+			"name": "exceptionTypeList",
+			"index":"82"
+		},
+		{
+			"name": "exceptionType",
+			"index":"83"
+		},
+		{
+			"name": "methodBody",
+			"index":"84"
+		},
+		{
+			"name": "instanceInitializer",
+			"index":"85"
+		},
+		{
+			"name": "staticInitializer",
+			"index":"86"
+		},
+		{
+			"name": "constructorDeclaration",
+			"index":"87"
+		},
+		{
+			"name": "constructorModifier",
+			"index":"88"
+		},
+		{
+			"name": "constructorDeclarator",
+			"index":"89"
+		},
+		{
+			"name": "simpleTypeName",
+			"index":"90"
+		},
+		{
+			"name": "constructorBody",
+			"index":"91"
+		},
+		{
+			"name": "explicitConstructorInvocation",
+			"index":"92"
+		},
+		{
+			"name": "enumDeclaration",
+			"index":"93"
+		},
+		{
+			"name": "enumBody",
+			"index":"94"
+		},
+		{
+			"name": "enumConstantList",
+			"index":"95"
+		},
+		{
+			"name": "enumConstant",
+			"index":"96"
+		},
+		{
+			"name": "enumConstantModifier",
+			"index":"97"
+		},
+		{
+			"name": "enumBodyDeclarations",
+			"index":"98"
+		},
+		{
+			"name": "interfaceDeclaration",
+			"index":"99"
+		},
+		{
+			"name": "normalInterfaceDeclaration",
+			"index":"100"
+		},
+		{
+			"name": "interfaceModifier",
+			"index":"101"
+		},
+		{
+			"name": "extendsInterfaces",
+			"index":"102"
+		},
+		{
+			"name": "interfaceBody",
+			"index":"103"
+		},
+		{
+			"name": "interfaceMemberDeclaration",
+			"index":"104"
+		},
+		{
+			"name": "constantDeclaration",
+			"index":"105"
+		},
+		{
+			"name": "constantModifier",
+			"index":"106"
+		},
+		{
+			"name": "interfaceMethodDeclaration",
+			"index":"107"
+		},
+		{
+			"name": "interfaceMethodModifier",
+			"index":"108"
+		},
+		{
+			"name": "annotationTypeDeclaration",
+			"index":"109"
+		},
+		{
+			"name": "annotationTypeBody",
+			"index":"110"
+		},
+		{
+			"name": "annotationTypeMemberDeclaration",
+			"index":"111"
+		},
+		{
+			"name": "annotationTypeElementDeclaration",
+			"index":"112"
+		},
+		{
+			"name": "annotationTypeElementModifier",
+			"index":"113"
+		},
+		{
+			"name": "defaultValue",
+			"index":"114"
+		},
+		{
+			"name": "annotation",
+			"index":"115"
+		},
+		{
+			"name": "normalAnnotation",
+			"index":"116"
+		},
+		{
+			"name": "elementValuePairList",
+			"index":"117"
+		},
+		{
+			"name": "elementValuePair",
+			"index":"118"
+		},
+		{
+			"name": "elementValue",
+			"index":"119"
+		},
+		{
+			"name": "elementValueArrayInitializer",
+			"index":"120"
+		},
+		{
+			"name": "elementValueList",
+			"index":"121"
+		},
+		{
+			"name": "markerAnnotation",
+			"index":"122"
+		},
+		{
+			"name": "singleElementAnnotation",
+			"index":"123"
+		},
+		{
+			"name": "arrayInitializer",
+			"index":"124"
+		},
+		{
+			"name": "variableInitializerList",
+			"index":"125"
+		},
+		{
+			"name": "block",
+			"index":"126"
+		},
+		{
+			"name": "blockStatements",
+			"index":"127"
+		},
+		{
+			"name": "blockStatement",
+			"index":"128"
+		},
+		{
+			"name": "localVariableDeclarationStatement",
+			"index":"129"
+		},
+		{
+			"name": "localVariableDeclaration",
+			"index":"130"
+		},
+		{
+			"name": "statement",
+			"index":"131"
+		},
+		{
+			"name": "statementNoShortIf",
+			"index":"132"
+		},
+		{
+			"name": "statementWithoutTrailingSubstatement",
+			"index":"133"
+		},
+		{
+			"name": "emptyStatement",
+			"index":"134"
+		},
+		{
+			"name": "labeledStatement",
+			"index":"135"
+		},
+		{
+			"name": "labeledStatementNoShortIf",
+			"index":"136"
+		},
+		{
+			"name": "expressionStatement",
+			"index":"137"
+		},
+		{
+			"name": "statementExpression",
+			"index":"138"
+		},
+		{
+			"name": "ifThenStatement",
+			"index":"139"
+		},
+		{
+			"name": "ifThenElseStatement",
+			"index":"140"
+		},
+		{
+			"name": "ifThenElseStatementNoShortIf",
+			"index":"141"
+		},
+		{
+			"name": "assertStatement",
+			"index":"142"
+		},
+		{
+			"name": "switchStatement",
+			"index":"143"
+		},
+		{
+			"name": "switchBlock",
+			"index":"144"
+		},
+		{
+			"name": "switchBlockStatementGroup",
+			"index":"145"
+		},
+		{
+			"name": "switchLabels",
+			"index":"146"
+		},
+		{
+			"name": "switchLabel",
+			"index":"147"
+		},
+		{
+			"name": "enumConstantName",
+			"index":"148"
+		},
+		{
+			"name": "whileStatement",
+			"index":"149"
+		},
+		{
+			"name": "whileStatementNoShortIf",
+			"index":"150"
+		},
+		{
+			"name": "doStatement",
+			"index":"151"
+		},
+		{
+			"name": "forStatement",
+			"index":"152"
+		},
+		{
+			"name": "forStatementNoShortIf",
+			"index":"153"
+		},
+		{
+			"name": "basicForStatement",
+			"index":"154"
+		},
+		{
+			"name": "basicForStatementNoShortIf",
+			"index":"155"
+		},
+		{
+			"name": "forInit",
+			"index":"156"
+		},
+		{
+			"name": "forUpdate",
+			"index":"157"
+		},
+		{
+			"name": "statementExpressionList",
+			"index":"158"
+		},
+		{
+			"name": "enhancedForStatement",
+			"index":"159"
+		},
+		{
+			"name": "enhancedForStatementNoShortIf",
+			"index":"160"
+		},
+		{
+			"name": "breakStatement",
+			"index":"161"
+		},
+		{
+			"name": "continueStatement",
+			"index":"162"
+		},
+		{
+			"name": "returnStatement",
+			"index":"163"
+		},
+		{
+			"name": "throwStatement",
+			"index":"164"
+		},
+		{
+			"name": "synchronizedStatement",
+			"index":"165"
+		},
+		{
+			"name": "tryStatement",
+			"index":"166"
+		},
+		{
+			"name": "catches",
+			"index":"167"
+		},
+		{
+			"name": "catchClause",
+			"index":"168"
+		},
+		{
+			"name": "catchFormalParameter",
+			"index":"169"
+		},
+		{
+			"name": "catchType",
+			"index":"170"
+		},
+		{
+			"name": "finally_",
+			"index":"171"
+		},
+		{
+			"name": "tryWithResourcesStatement",
+			"index":"172"
+		},
+		{
+			"name": "resourceSpecification",
+			"index":"173"
+		},
+		{
+			"name": "resourceList",
+			"index":"174"
+		},
+		{
+			"name": "resource",
+			"index":"175"
+		},
+		{
+			"name": "primary",
+			"index":"176"
+		},
+		{
+			"name": "primaryNoNewArray",
+			"index":"177"
+		},
+		{
+			"name": "primaryNoNewArray_lf_arrayAccess",
+			"index":"178"
+		},
+		{
+			"name": "primaryNoNewArray_lfno_arrayAccess",
+			"index":"179"
+		},
+		{
+			"name": "primaryNoNewArray_lf_primary",
+			"index":"180"
+		},
+		{
+			"name": "primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary",
+			"index":"181"
+		},
+		{
+			"name": "primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary",
+			"index":"182"
+		},
+		{
+			"name": "primaryNoNewArray_lfno_primary",
+			"index":"183"
+		},
+		{
+			"name": "primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary",
+			"index":"184"
+		},
+		{
+			"name": "primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary",
+			"index":"185"
+		},
+		{
+			"name": "classInstanceCreationExpression",
+			"index":"186"
+		},
+		{
+			"name": "classInstanceCreationExpression_lf_primary",
+			"index":"187"
+		},
+		{
+			"name": "classInstanceCreationExpression_lfno_primary",
+			"index":"188"
+		},
+		{
+			"name": "typeArgumentsOrDiamond",
+			"index":"189"
+		},
+		{
+			"name": "fieldAccess",
+			"index":"190"
+		},
+		{
+			"name": "fieldAccess_lf_primary",
+			"index":"191"
+		},
+		{
+			"name": "fieldAccess_lfno_primary",
+			"index":"192"
+		},
+		{
+			"name": "arrayAccess",
+			"index":"193"
+		},
+		{
+			"name": "arrayAccess_lf_primary",
+			"index":"194"
+		},
+		{
+			"name": "arrayAccess_lfno_primary",
+			"index":"195"
+		},
+		{
+			"name": "methodInvocation",
+			"index":"196"
+		},
+		{
+			"name": "methodInvocation_lf_primary",
+			"index":"197"
+		},
+		{
+			"name": "methodInvocation_lfno_primary",
+			"index":"198"
+		},
+		{
+			"name": "argumentList",
+			"index":"199"
+		},
+		{
+			"name": "methodReference",
+			"index":"200"
+		},
+		{
+			"name": "methodReference_lf_primary",
+			"index":"201"
+		},
+		{
+			"name": "methodReference_lfno_primary",
+			"index":"202"
+		},
+		{
+			"name": "arrayCreationExpression",
+			"index":"203"
+		},
+		{
+			"name": "dimExprs",
+			"index":"204"
+		},
+		{
+			"name": "dimExpr",
+			"index":"205"
+		},
+		{
+			"name": "constantExpression",
+			"index":"206"
+		},
+		{
+			"name": "expression",
+			"index":"207"
+		},
+		{
+			"name": "lambdaExpression",
+			"index":"208"
+		},
+		{
+			"name": "lambdaParameters",
+			"index":"209"
+		},
+		{
+			"name": "inferredFormalParameterList",
+			"index":"210"
+		},
+		{
+			"name": "lambdaBody",
+			"index":"211"
+		},
+		{
+			"name": "assignmentExpression",
+			"index":"212"
+		},
+		{
+			"name": "assignment",
+			"index":"213"
+		},
+		{
+			"name": "leftHandSide",
+			"index":"214"
+		},
+		{
+			"name": "assignmentOperator",
+			"index":"215"
+		},
+		{
+			"name": "conditionalExpression",
+			"index":"216"
+		},
+		{
+			"name": "conditionalOrExpression",
+			"index":"217"
+		},
+		{
+			"name": "conditionalAndExpression",
+			"index":"218"
+		},
+		{
+			"name": "inclusiveOrExpression",
+			"index":"219"
+		},
+		{
+			"name": "exclusiveOrExpression",
+			"index":"220"
+		},
+		{
+			"name": "andExpression",
+			"index":"221"
+		},
+		{
+			"name": "equalityExpression",
+			"index":"222"
+		},
+		{
+			"name": "relationalExpression",
+			"index":"223"
+		},
+		{
+			"name": "shiftExpression",
+			"index":"224"
+		},
+		{
+			"name": "additiveExpression",
+			"index":"225"
+		},
+		{
+			"name": "multiplicativeExpression",
+			"index":"226"
+		},
+		{
+			"name": "unaryExpression",
+			"index":"227"
+		},
+		{
+			"name": "preIncrementExpression",
+			"index":"228"
+		},
+		{
+			"name": "preDecrementExpression",
+			"index":"229"
+		},
+		{
+			"name": "unaryExpressionNotPlusMinus",
+			"index":"230"
+		},
+		{
+			"name": "postfixExpression",
+			"index":"231"
+		},
+		{
+			"name": "postIncrementExpression",
+			"index":"232"
+		},
+		{
+			"name": "postIncrementExpression_lf_postfixExpression",
+			"index":"233"
+		},
+		{
+			"name": "postDecrementExpression",
+			"index":"234"
+		},
+		{
+			"name": "postDecrementExpression_lf_postfixExpression",
+			"index":"235"
+		},
+		{
+			"name": "castExpression",
+			"index":"236"
+		}
+	]
+}

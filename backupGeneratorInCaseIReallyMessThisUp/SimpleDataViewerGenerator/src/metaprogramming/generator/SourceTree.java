@@ -1,0 +1,181 @@
+package metaprogramming.generator;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+import com.google.gson.Gson;
+
+public class SourceTree {
+	
+	private ArrayList<TreeData> nodes = new ArrayList<TreeData>();
+	private ArrayList<TreeData> targets = new ArrayList<TreeData>();
+	private boolean searchedForTargets = false;
+	private String relatedSourceFile;
+	
+	public void findTargets (){
+		
+		if (searchedForTargets == false){
+			for (TreeData node: nodes){
+				if (node.getTarget() != null){
+					this.targets.add(node);
+				}
+			}
+			
+			searchedForTargets = true;
+		}
+		
+	}
+	
+	public ArrayList<TreeData> getTargets(){
+		this.findTargets();
+		return this.targets;
+	}
+	
+	public TreeData findTarget(String targetName){
+		for (TreeData target:targets){
+			if (target.getTarget().equals(targetName)){
+				return target;
+			}
+		}
+		
+		return null;
+	}
+	
+	public ArrayList<TreeData> getNodes() {
+		return nodes;
+	}
+
+	public void setNodes(ArrayList<TreeData> nodes) {
+		this.nodes = nodes;
+	}
+	
+	public void addNode(TreeData node){
+		nodes.add(node);
+	}
+	
+	public void sortByNodeId(){
+		nodes.sort(new Comparator<TreeData>(){
+
+			@Override
+			public int compare(TreeData node1, TreeData node2) {
+
+				return node1.getNodeId().compareTo(node2.getNodeId());
+			}
+			
+		});
+	}
+	
+	public String printSource(){
+		this.sortByNodeId();
+		
+		String result =  "";
+		
+		for (TreeData node: nodes){
+			if (node.getType().equals("token")){
+				
+				if (!node.getText().equals("<EOF>")){
+					result += " " + node.getText();
+					
+					switch (node.getText()){
+					case ";":
+						result += "\n";
+						break;
+					case "{":
+						result += "\n";
+						break;
+					case "}":
+						result += "\n";
+						break;
+					case "Override":
+						result += "\n";
+						break;
+					}
+				}
+			}
+		}
+		
+		return result;
+	}
+	
+	public String toJson(){
+		Gson gson = new Gson();
+		return gson.toJson(nodes);
+		
+	}
+	
+	public void mergeTreeAtTarget(SourceTree microservice, String targetName){
+		this.sortByNodeId();
+		TreeData target = this.findTarget(targetName);
+		
+		if (target == null){
+			System.out.println("Target " + targetName + " not found!");
+			System.exit(1);
+		}
+		
+		int targetNodeIndex = getNodeIndexById(target.getNodeId());
+		//nodes.remove(targetNodeIndex);
+		
+		microservice.getRoot().setParentId(target.getNodeId());
+		
+		ArrayList<TreeData> msNodes = microservice.getNodes();
+		
+		//Re-index main tree
+		int offset = msNodes.size();
+		
+		for (int i = targetNodeIndex + 1; i < nodes.size(); i++){
+			int originalNodeId = nodes.get(i).getNodeId();
+			int originalParentId = nodes.get(i).getParentId();
+			
+			nodes.get(i).setNodeId(originalNodeId + offset);
+			nodes.get(i).setParentId(originalParentId + offset);
+		}
+		
+		//Add microservice nodes and update their node id's
+		for (TreeData msNode: msNodes){
+			int msNodeId = msNode.getNodeId();	
+			
+			msNode.setNodeId(msNodeId + target.getNodeId() + 1);
+			
+			if (msNode.getParentId() != target.getNodeId()){
+				int msParentId = msNode.getParentId();
+				msNode.setParentId(msParentId + target.getNodeId() + 1);
+			}
+			this.nodes.add(msNode);
+		}
+		
+		this.sortByNodeId();
+		
+	}
+	
+	public int getNodeIndexById(int id){
+		for (TreeData node: nodes){
+			if (node.getNodeId() == id){
+				return nodes.indexOf(node);
+			}
+		}
+		return -1;
+	}
+	
+	public TreeData getRoot(){
+		for (TreeData node: nodes){
+			if (node.getParentId() == -1){
+				return node;
+			}
+		}
+		
+		return null;
+	}
+
+	public String getRelatedSourceFile() {
+		return relatedSourceFile;
+	}
+
+	public void setRelatedSourceFile(String relatedSourceFile) {
+		this.relatedSourceFile = relatedSourceFile;
+		
+		for (TreeData node: nodes){
+			node.setRelatedSourceFile(relatedSourceFile);
+		}
+	}
+
+}

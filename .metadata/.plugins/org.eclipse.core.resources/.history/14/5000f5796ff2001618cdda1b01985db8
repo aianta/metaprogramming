@@ -1,0 +1,213 @@
+package metaprogramming.jobs;
+
+import java.util.ArrayList;
+
+import metaprogramming.generator.Job;
+import metaprogramming.generator.SourceFile;
+import metaprogramming.generator.TreeData;
+import metaprogramming.generator.processors.AddComparatorProcessor;
+import metaprogramming.generator.processors.AddFieldListModelInstanceProcessor;
+import metaprogramming.generator.processors.AddFieldListModelProcessor;
+import metaprogramming.generator.processors.AddSortFunctionProcessor;
+import metaprogramming.generator.processors.DataJavaProcessor;
+import metaprogramming.generator.processors.DataModelJavaProcessor;
+import metaprogramming.generator.processors.DeclareFieldProcessor;
+import metaprogramming.generator.processors.GetFieldProcessor;
+import metaprogramming.generator.processors.Record1TestProcessor;
+import metaprogramming.generator.processors.Record2TestProcessor;
+import metaprogramming.generator.processors.Record3TestProcessor;
+import metaprogramming.generator.processors.SetFieldProcessor;
+import metaprogramming.generator.processors.SimpleDataViewerJavaProcessor;
+
+public class NewDataFieldJob extends Job{
+	
+	//Define microservice source files
+	SourceFile declareField;
+	SourceFile getField;
+	SourceFile setField;
+	SourceFile addSortFunction;
+	SourceFile addComparator;
+	SourceFile addFieldListModel;
+	SourceFile addFieldListModelInstance;
+	SourceFile record1Test;
+	SourceFile record2Test;
+	SourceFile record3Test;
+	SourceFile addDataFieldPanel;
+	
+	//Define microservice processors
+	DeclareFieldProcessor declareFieldProcessor;
+	GetFieldProcessor getFieldProcessor;
+	SetFieldProcessor setFieldProcessor;
+	AddSortFunctionProcessor addSortFunctionProcessor;
+	AddComparatorProcessor addComparatorProcessor;
+	AddFieldListModelProcessor addFieldListModelProcessor;
+	AddFieldListModelInstanceProcessor addFieldListModelInstanceProcessor;
+	Record1TestProcessor record1TestProcessor;
+	Record2TestProcessor record2TestProcessor;
+	Record3TestProcessor record3TestProcessor;
+	AddDataFieldPanelProcessor addDataFieldPanelProcessor;
+	
+	
+	public NewDataFieldJob (){
+		this.setName("[New Data Field]");
+	}
+	
+	
+	@Override
+	public void run() {
+		super.processExplicitTargets();
+		
+		SourceFile dataJava = 
+				new SourceFile ("Data", "src/metaprogramming/source/Data.java", ".java");
+	
+		SourceFile dataModelJava =
+				new SourceFile ("DataModel", "src/metaprogramming/source/DataModel.java",".java");
+		
+		SourceFile simpleDataViewerJava =
+				new SourceFile ("SimpleDataViewer", "src/metaprogramming/source/SimpleDataViewer.java", ".java");
+		
+		dataJava.load();
+		dataModelJava.load();
+		simpleDataViewerJava.load();
+		
+		DataJavaProcessor dataJavaProcessor = new DataJavaProcessor(dataJava);
+		DataModelJavaProcessor dataModelJavaProcessor = new DataModelJavaProcessor(dataModelJava);
+		SimpleDataViewerJavaProcessor simpleDataViewerJavaProcessor = new SimpleDataViewerJavaProcessor(simpleDataViewerJava);
+		
+		dataJavaProcessor.processFile();
+		dataModelJavaProcessor.processFile();
+		simpleDataViewerJavaProcessor.processFile();
+		
+		dataJavaProcessor.getSourceFile()
+		.applyMicroservice(
+				getFieldProcessor.getSourceFile().getSourceTree(),
+				"classBody");
+	
+		dataJavaProcessor.getSourceFile()
+		.applyMicroservice(setFieldProcessor.getSourceFile().getSourceTree()
+				, "classBody");
+		
+		dataJavaProcessor.getSourceFile()
+			.applyMicroservice(
+					declareFieldProcessor.getSourceFile().getSourceTree(),
+					"classBody");
+		
+		dataModelJavaProcessor.getSourceFile()
+			.applyMicroservice(addSortFunctionProcessor.getSourceFile().getSourceTree(),
+					"classBody");
+		
+		simpleDataViewerJavaProcessor.getSourceFile()
+			.applyMicroservice(record1TestProcessor.getSourceFile().getSourceTree(),
+					"constructorBody");
+		
+		simpleDataViewerJavaProcessor.getSourceFile()
+			.applyMicroservice(record2TestProcessor.getSourceFile().getSourceTree(),
+					"constructorBody");
+		
+		simpleDataViewerJavaProcessor.getSourceFile()
+		.applyMicroservice(record3TestProcessor.getSourceFile().getSourceTree(),
+				"constructorBody");
+		
+		simpleDataViewerJavaProcessor.getSourceFile()
+			.applyMicroservice(addFieldListModelInstanceProcessor.getSourceFile().getSourceTree(),
+					"constructorBody");
+		
+		
+		dataJavaProcessor.generate();
+		dataModelJavaProcessor.generate();
+		addComparatorProcessor.generate(super.getTargetByName("fieldName").getText() + "Comparator");
+		addFieldListModelProcessor.generate(super.getTargetByName("fieldName").getText() + "ListModel");
+		simpleDataViewerJavaProcessor.generate();
+		
+		super.complete();
+	}
+
+
+	@Override
+	public void analyzeTargets() {
+		
+		declareField =
+				new SourceFile ("declareField", "src/metaprogramming/microservice/declareField.java", ".java");
+		
+		getField =
+				new SourceFile ("getField", "src/metaprogramming/microservice/fieldGetter.java", ".java");
+		
+		setField =
+				new SourceFile ("setField", "src/metaprogramming/microservice/fieldSetter.java", ".java");
+				
+		addSortFunction =
+				new SourceFile ("addSortFunction", "src/metaprogramming/microservice/addSortFunction.java",".java");
+		
+		addComparator =
+				new SourceFile ("addComparator", "src/metaprogramming/microservice/addComparator.java", ".java");
+		
+		addFieldListModel =
+				new SourceFile ("addFieldListModel", "src/metaprogramming/microservice/addFieldListModel.java", ".java");
+		
+		addFieldListModelInstance =
+				new SourceFile ("addFieldListModelInstance","src/metaprogramming/microservice/addFieldListModelInstance.java", ".java");
+		
+		record1Test =
+				new SourceFile ("record1Test", "src/metaprogramming/microservice/record1Test.java", ".java");
+		
+		record2Test =
+				new SourceFile ("record2Test", "src/metaprogramming/microservice/record2Test.java", ".java");
+		
+		record3Test =
+				new SourceFile ("record3Test", "src/metaprogramming/microservice/record3Test.java", ".java");
+		
+		addDataFieldPanel =
+				new SourceFile ("addDataFieldPanel", "src/metaprogramming/microservice/addDataFieldPanel.java", ".java");
+		
+		
+		declareField.load();
+		getField.load();
+		setField.load();
+		addSortFunction.load();
+		addComparator.load();
+		addFieldListModel.load();
+		addFieldListModelInstance.load();
+		record1Test.load();
+		record2Test.load();
+		record3Test.load();
+		addDataFieldPanel.load();
+		
+		declareFieldProcessor = new DeclareFieldProcessor(declareField);
+		getFieldProcessor = new GetFieldProcessor(getField);
+		setFieldProcessor = new SetFieldProcessor(setField);
+		addSortFunctionProcessor = new AddSortFunctionProcessor(addSortFunction);
+		addComparatorProcessor = new AddComparatorProcessor(addComparator);
+		addFieldListModelProcessor = new AddFieldListModelProcessor(addFieldListModel);
+		addFieldListModelInstanceProcessor = new AddFieldListModelInstanceProcessor(addFieldListModelInstance);
+		record1TestProcessor = new Record1TestProcessor(record1Test);
+		record2TestProcessor = new Record2TestProcessor(record2Test);
+		record3TestProcessor = new Record3TestProcessor(record3Test);
+		addDataFieldPanelProcessor = new AddDataFieldPanelProcessor(addDataFieldPanel);
+		
+		declareFieldProcessor.processFile();
+		getFieldProcessor.processFile();
+		setFieldProcessor.processFile();
+		addSortFunctionProcessor.processFile();
+		addComparatorProcessor.processFile();
+		addFieldListModelProcessor.processFile();
+		addFieldListModelInstanceProcessor.processFile();
+		record1TestProcessor.processFile();
+		record2TestProcessor.processFile();
+		record3TestProcessor.processFile();
+		addDataFieldPanelProcessor.processFile();
+		
+		super.addSourceFileTargetsToJob(declareField);
+		super.addSourceFileTargetsToJob(getField);
+		super.addSourceFileTargetsToJob(setField);
+		super.addSourceFileTargetsToJob(addSortFunction);
+		super.addSourceFileTargetsToJob(addComparator);
+		super.addSourceFileTargetsToJob(addFieldListModel);
+		super.addSourceFileTargetsToJob(addFieldListModelInstance);
+		super.addSourceFileTargetsToJob(record1Test);
+		super.addSourceFileTargetsToJob(record2Test);
+		super.addSourceFileTargetsToJob(record3Test);
+		
+		System.out.println("HALT!");
+	}
+
+}

@@ -1,0 +1,341 @@
+{
+	"nodes": [
+		{
+			"nodeId": "7",
+			"type": "token",
+			"text": "stateProperty",
+			"parentId":"6"
+		},
+		{
+			"nodeId": "6",
+			"type": "rule",
+			"ruleIndex": "27",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "8",
+			"type": "token",
+			"text": ".",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "9",
+			"type": "token",
+			"text": "addPropertyChangeListener",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "10",
+			"type": "token",
+			"text": "(",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "31",
+			"type": "token",
+			"text": "new",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "32",
+			"type": "token",
+			"text": "SimpleDataViewerListener",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "33",
+			"type": "token",
+			"text": "(",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "52",
+			"type": "token",
+			"text": "firstNamePanel",
+			"parentId":"51",
+			"target": "fieldPanel"
+		},
+		{
+			"nodeId": "51",
+			"type": "rule",
+			"ruleIndex": "29",
+			"parentId":"50"
+		},
+		{
+			"nodeId": "50",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"49"
+		},
+		{
+			"nodeId": "49",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"48"
+		},
+		{
+			"nodeId": "48",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"47"
+		},
+		{
+			"nodeId": "47",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"46"
+		},
+		{
+			"nodeId": "46",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"45"
+		},
+		{
+			"nodeId": "45",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"44"
+		},
+		{
+			"nodeId": "44",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"43"
+		},
+		{
+			"nodeId": "43",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"42"
+		},
+		{
+			"nodeId": "42",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"41"
+		},
+		{
+			"nodeId": "41",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"40"
+		},
+		{
+			"nodeId": "40",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"39"
+		},
+		{
+			"nodeId": "39",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"38"
+		},
+		{
+			"nodeId": "38",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"37"
+		},
+		{
+			"nodeId": "37",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"36"
+		},
+		{
+			"nodeId": "36",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"35"
+		},
+		{
+			"nodeId": "35",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"34"
+		},
+		{
+			"nodeId": "34",
+			"type": "rule",
+			"ruleIndex": "199",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "53",
+			"type": "token",
+			"text": ")",
+			"parentId":"30"
+		},
+		{
+			"nodeId": "30",
+			"type": "rule",
+			"ruleIndex": "188",
+			"parentId":"29"
+		},
+		{
+			"nodeId": "29",
+			"type": "rule",
+			"ruleIndex": "183",
+			"parentId":"28"
+		},
+		{
+			"nodeId": "28",
+			"type": "rule",
+			"ruleIndex": "176",
+			"parentId":"27"
+		},
+		{
+			"nodeId": "27",
+			"type": "rule",
+			"ruleIndex": "231",
+			"parentId":"26"
+		},
+		{
+			"nodeId": "26",
+			"type": "rule",
+			"ruleIndex": "230",
+			"parentId":"25"
+		},
+		{
+			"nodeId": "25",
+			"type": "rule",
+			"ruleIndex": "227",
+			"parentId":"24"
+		},
+		{
+			"nodeId": "24",
+			"type": "rule",
+			"ruleIndex": "226",
+			"parentId":"23"
+		},
+		{
+			"nodeId": "23",
+			"type": "rule",
+			"ruleIndex": "225",
+			"parentId":"22"
+		},
+		{
+			"nodeId": "22",
+			"type": "rule",
+			"ruleIndex": "224",
+			"parentId":"21"
+		},
+		{
+			"nodeId": "21",
+			"type": "rule",
+			"ruleIndex": "223",
+			"parentId":"20"
+		},
+		{
+			"nodeId": "20",
+			"type": "rule",
+			"ruleIndex": "222",
+			"parentId":"19"
+		},
+		{
+			"nodeId": "19",
+			"type": "rule",
+			"ruleIndex": "221",
+			"parentId":"18"
+		},
+		{
+			"nodeId": "18",
+			"type": "rule",
+			"ruleIndex": "220",
+			"parentId":"17"
+		},
+		{
+			"nodeId": "17",
+			"type": "rule",
+			"ruleIndex": "219",
+			"parentId":"16"
+		},
+		{
+			"nodeId": "16",
+			"type": "rule",
+			"ruleIndex": "218",
+			"parentId":"15"
+		},
+		{
+			"nodeId": "15",
+			"type": "rule",
+			"ruleIndex": "217",
+			"parentId":"14"
+		},
+		{
+			"nodeId": "14",
+			"type": "rule",
+			"ruleIndex": "216",
+			"parentId":"13"
+		},
+		{
+			"nodeId": "13",
+			"type": "rule",
+			"ruleIndex": "212",
+			"parentId":"12"
+		},
+		{
+			"nodeId": "12",
+			"type": "rule",
+			"ruleIndex": "207",
+			"parentId":"11"
+		},
+		{
+			"nodeId": "11",
+			"type": "rule",
+			"ruleIndex": "199",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "54",
+			"type": "token",
+			"text": ")",
+			"parentId":"5"
+		},
+		{
+			"nodeId": "5",
+			"type": "rule",
+			"ruleIndex": "196",
+			"parentId":"4"
+		},
+		{
+			"nodeId": "4",
+			"type": "rule",
+			"ruleIndex": "138",
+			"parentId":"3"
+		},
+		{
+			"nodeId": "55",
+			"type": "token",
+			"text": ";",
+			"parentId":"3"
+		},
+		{
+			"nodeId": "3",
+			"type": "rule",
+			"ruleIndex": "137",
+			"parentId":"2"
+		},
+		{
+			"nodeId": "2",
+			"type": "rule",
+			"ruleIndex": "133",
+			"parentId":"1"
+		},
+		{
+			"nodeId": "1",
+			"type": "rule",
+			"ruleIndex": "131",
+			"parentId":"0"
+		},
+		{
+			"nodeId": "0",
+			"type": "rule",
+			"ruleIndex": "128",
+			"parentId": "-1"
+		}
+	]
+}
