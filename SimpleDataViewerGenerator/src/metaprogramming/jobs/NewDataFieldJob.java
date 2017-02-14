@@ -61,6 +61,8 @@ public class NewDataFieldJob extends Job{
 	public void run() {
 		super.processExplicitTargets();
 		
+		long startTime = System.currentTimeMillis();
+		
 		SourceFile dataJava = 
 				new SourceFile ("Data", "src/metaprogramming/source/Data.java", ".java");
 	
@@ -131,7 +133,12 @@ public class NewDataFieldJob extends Job{
 		addFieldListModelProcessor.generate(super.getTargetByName("fieldListModel").getText());
 		simpleDataViewerJavaProcessor.generate();
 		
-		super.complete();
+		long stopTime = System.currentTimeMillis();
+		
+		super.complete(startTime, stopTime);
+		
+		
+		
 	}
 
 
