@@ -28,9 +28,11 @@ public abstract class Job {
 		return null;
 	}
 	
-	public void complete() {
+	public void complete(long startTime, long stopTime) {
 		
-		System.out.println("Job " + this.getName() + " completed!");
+		long elapsed = stopTime - startTime;
+		
+		System.out.println("Job " + this.getName() + " completed in "+ elapsed +"ms !");
 	}
 	
 	private void addTargetToJob(TreeData target){
